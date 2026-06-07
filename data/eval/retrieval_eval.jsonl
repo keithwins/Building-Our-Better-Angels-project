@@ -1,0 +1,8 @@
+{"id": "re_01", "query": "overwhelmed by unfamiliar technical system", "expected_path": "docs/method/how-we-work-here.md", "expected_heading": "wobbly edge"}
+{"id": "re_02", "query": "avoid making Keith a human clipboard", "expected_path": "docs/method/how-we-work-here.md", "expected_heading": "human remains in the vetting loop"}
+{"id": "re_03", "query": "plausible but unchecked claims", "expected_path": "docs/method/how-we-work-here.md", "expected_heading": "Quarantine uncertainty"}
+{"id": "re_04", "query": "one heavy GPU job at a time", "expected_path": "docs/tooling/hermes-kanban-reference-260607.md", "expected_heading": "Concurrency"}
+{"id": "re_05", "query": "first safe GPU workload", "expected_path": "docs/session-records/boba-session-record-260607-research-scheduler-and-jepa.md", "expected_heading": "Probe-set MVE"}
+{"id": "re_06", "query": "not choosing Qwen or Gemma by vibes", "expected_path": "docs/session-records/boba-session-record-260607-research-scheduler-and-jepa.md", "expected_heading": "Probe-set MVE"}
+{"id": "re_07", "query": "invented Hermes configuration values", "expected_path": "docs/tooling/hermes-kanban-reference-260607.md", "expected_heading": "CONFABULATED"}
+{"id": "re_08", "query": "trust vs inspectability tradeoff", "expected_path": "docs/method/how-we-work-here.md", "expected_heading": "Trust is larger than inspection"}

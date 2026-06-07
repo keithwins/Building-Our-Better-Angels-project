@@ -38,6 +38,30 @@ python3 scripts/search_boba_corpus.py --smoke-test   # runs 4 canonical queries
 | `data/index/embeddings.npy` | No | Binary, regenerable from manifest + model |
 | `data/index/search_smoke_test.txt` | No | Generated artifact |
 
+## Benchmark
+
+`data/eval/retrieval_eval.jsonl` contains 8 paraphrase queries (not exact phrases) with expected source paths and heading substrings. Run with:
+
+```bash
+python3 scripts/eval_boba_retrieval.py
+python3 scripts/eval_boba_retrieval.py --top-k 5 --out data/eval/retrieval_eval_results.txt
+```
+
+Reports top-1 accuracy, top-3 accuracy, top-k accuracy, MRR, and prints failures with actual top-3 hits. Results file is not committed.
+
+Example queries and their expected targets:
+
+| Query | Expected section |
+|---|---|
+| overwhelmed by unfamiliar technical system | §14. The wobbly edge |
+| avoid making Keith a human clipboard | §9. The human remains in the vetting loop |
+| plausible but unchecked claims | §5. Quarantine uncertainty |
+| one heavy GPU job at a time | §5.1 Concurrency (hermes-kanban-reference) |
+| invented Hermes configuration values | §6. CONFABULATED |
+| trust vs inspectability tradeoff | §2. Trust is larger than inspection |
+
+---
+
 ## Limitations (MVE scope)
 
 - No incremental update — rebuild from scratch when corpus changes.

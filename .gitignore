@@ -3,6 +3,9 @@ data/index/embeddings.npy
 data/index/search_smoke_test.txt
 data/index/__pycache__/
 
+# Generated eval results
+data/eval/retrieval_eval_results.txt
+
 # Python
 __pycache__/
 *.pyc
