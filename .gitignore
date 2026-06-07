@@ -1,0 +1,8 @@
+# Generated index artifacts — rebuild with scripts/build_boba_index.py
+data/index/embeddings.npy
+data/index/search_smoke_test.txt
+data/index/__pycache__/
+
+# Python
+__pycache__/
+*.pyc
