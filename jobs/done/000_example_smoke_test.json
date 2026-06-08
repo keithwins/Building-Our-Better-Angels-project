@@ -1,0 +1,5 @@
+{
+  "title": "Smoke test — echo date",
+  "command": "echo 'queue runner smoke test' && date",
+  "max_seconds": 10
+}
