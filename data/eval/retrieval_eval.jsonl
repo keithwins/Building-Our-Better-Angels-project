@@ -6,3 +6,10 @@
 {"id": "re_06", "query": "not choosing Qwen or Gemma by vibes", "acceptable_targets": [{"path": "docs/session-records/boba-session-record-260607-research-scheduler-and-jepa.md", "heading": "Probe-set MVE"}]}
 {"id": "re_07", "query": "invented Hermes configuration values", "acceptable_targets": [{"path": "docs/tooling/hermes-kanban-reference-260607.md", "heading": "CONFABULATED"}]}
 {"id": "re_08", "query": "trust vs inspectability tradeoff", "acceptable_targets": [{"path": "docs/method/how-we-work-here.md", "heading": "Trust is larger than inspection"}]}
+{"id": "re_09", "query": "IFS grammar named angels Self as orchestrator", "acceptable_targets": [{"path": "docs/core/boba-core-mission-and-commitments.md", "heading": "Grammar"}]}
+{"id": "re_10", "query": "mirror not cheer reflecting state without flattery", "acceptable_targets": [{"path": "docs/method/how-we-work-here.md", "heading": "Mirror, not cheer"}, {"path": "docs/core/boba-braid.md", "heading": "Core Principles"}]}
+{"id": "re_11", "query": "stoppability design requirement stop sentinel clean kill", "acceptable_targets": [{"path": "docs/method/how-we-work-here.md", "heading": "Stoppability"}]}
+{"id": "re_12", "query": "blind actuation failure human clipboard vetting loop", "acceptable_targets": [{"path": "docs/method/how-we-work-here.md", "heading": "human remains in the vetting loop"}]}
+{"id": "re_13", "query": "lamp not lever metaphor not load-bearing machinery", "acceptable_targets": [{"path": "docs/method/how-we-work-here.md", "heading": "Lamp, not lever"}]}
+{"id": "re_14", "query": "probe-set instrument evaluating model alignment", "acceptable_targets": [{"path": "docs/session-records/boba-session-record-260607-research-scheduler-and-jepa.md", "heading": "Probe-set MVE"}]}
+{"id": "re_15", "query": "ecological confusion systemic not personal weakness", "acceptable_targets": [{"path": "docs/core/boba-core-mission-and-commitments.md", "heading": "Core Commitments"}]}

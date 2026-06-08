@@ -269,3 +269,39 @@ When in doubt:
 6. Leave a trace for whoever comes next.
 
 This is how we work here.
+
+---
+
+*The following sections were added after the 2026-06-07 overnight session, which produced several hard failures worth naming.*
+
+## 16. Upstream first
+
+When something fails, check the most basic precondition before diagnosing downstream configuration.
+
+On 2026-06-07 we spent an hour debugging approval gates, allowlists, and Hermes config while Ollama was crash-looping due to a nonexistent CLI flag. The approval system worked fine. The problem was that the service it depended on had never started successfully.
+
+The rule: before adjusting config for a downstream dependency, verify the dependency is actually running and healthy. `systemctl status`, `curl`, `journalctl -u` — one of these before any config change.
+
+## 17. Flags that do not exist
+
+Do not add CLI flags to commands based on web search results without verifying against `--help` or the actual binary.
+
+On 2026-06-07 we added `--embeddings` to `ollama serve` based on a web result that turned out to be wrong or fictional. The flag did not exist in the installed version. Ollama crash-looped more than forty times before the flag was identified as the cause.
+
+The rule: any flag added to a service's `ExecStart` must appear in `ollama serve --help` output before it is written to the service file. Verify against the binary, not against a claim about the binary.
+
+## 18. The approval gate is not the enemy
+
+`approvals.mode: manual` with a timeout value does not auto-approve after the timeout. It fails closed — the action is denied.
+
+We spent significant time believing that `timeout: 60` meant approval would eventually be granted. It does not. `manual` mode requires a live human to approve each action within the window, or the action is denied.
+
+The right posture for unattended operation is `approvals.mode: smart` with a local auxiliary LLM configured as the approval provider. Smart mode uses the local model to judge whether each action is within the card's stated scope, and approves or denies without requiring human attention.
+
+## 19. Protocol completion is mandatory
+
+Hermes workers must call `kanban_complete` or `kanban_block` before exiting. Exiting cleanly (rc=0) without either is a protocol violation, and Hermes will mark the card as blocked.
+
+Several overnight cards produced a "Latest summary" in their metadata and reported apparent success, but the underlying work was never written to disk — the worker had exited without calling `kanban_complete`. The card's DONE status was a fiction.
+
+The rule: card bodies should explicitly instruct workers to call `kanban_complete` as the final action, with a clear statement that the card is not complete until this call is made. Do not assume workers know this without being told.

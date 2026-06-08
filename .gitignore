@@ -6,6 +6,13 @@ data/index/__pycache__/
 # Generated eval results
 data/eval/retrieval_eval_results.txt
 
+# Smoke-test scratch artifacts (not durable)
+data/eval/smart_approval_test.txt
+
+# Local job queue — ephemeral dirs and logs
+jobs/running/
+logs/jobs/
+
 # Python
 __pycache__/
 *.pyc
