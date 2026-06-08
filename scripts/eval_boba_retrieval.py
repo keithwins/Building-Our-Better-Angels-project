@@ -42,10 +42,14 @@ def cosine_similarity(a, b_matrix):
     return b_norm @ a
 
 
-def chunk_matches(chunk, expected_path, expected_heading):
-    path_ok = chunk["source_path"].endswith(expected_path) or expected_path in chunk["source_path"]
-    heading_ok = expected_heading.lower() in chunk["heading"].lower()
+def chunk_matches_target(chunk, target):
+    path_ok = chunk["source_path"].endswith(target["path"]) or target["path"] in chunk["source_path"]
+    heading_ok = target["heading"].lower() in chunk["heading"].lower()
     return path_ok and heading_ok
+
+
+def chunk_matches(chunk, case):
+    return any(chunk_matches_target(chunk, t) for t in case["acceptable_targets"])
 
 
 def load_index():
@@ -74,15 +78,14 @@ def run_eval(cases, chunks, embeddings, top_k):
 
         hit_rank = None
         for rank, idx in enumerate(ranked, 1):
-            if chunk_matches(chunks[idx], case["expected_path"], case["expected_heading"]):
+            if chunk_matches(chunks[idx], case):
                 hit_rank = rank
                 break
 
         results.append({
             "id": case["id"],
             "query": case["query"],
-            "expected_path": case["expected_path"],
-            "expected_heading": case["expected_heading"],
+            "acceptable_targets": case["acceptable_targets"],
             "hit_rank": hit_rank,
             "top_hits": [
                 {
@@ -118,7 +121,8 @@ def summarize(results, top_k):
         lines.append(f"--- Failures / misses (not in top-3) ---")
         for r in failures:
             lines.append(f"\n[{r['id']}] {r['query']!r}")
-            lines.append(f"  expected: {r['expected_path']}  §{r['expected_heading']}")
+            targets = "  |  ".join(f"{t['path']}  §{t['heading']}" for t in r["acceptable_targets"])
+            lines.append(f"  acceptable: {targets}")
             lines.append(f"  actual top {min(3, len(r['top_hits']))}:")
             for h in r["top_hits"][:3]:
                 lines.append(f"    [{h['rank']}] score={h['score']:.3f}  {h['source_path']}  §{h['heading'][:60]}")
