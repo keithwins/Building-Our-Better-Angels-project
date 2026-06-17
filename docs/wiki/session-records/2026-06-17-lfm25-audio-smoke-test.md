@@ -134,3 +134,17 @@ libc++abi: terminating due to uncaught exception of type std::runtime_error: wei
 ## Output file
 
 No output WAV produced.
+
+## Interpretation
+
+The old LFM2 Android ARM64 runner is executable inside the Pixel Debian Termux environment, but it does not appear compatible with the LFM2.5 audio stack.
+
+The smoke test began loading the LFM2.5 main model and identified it as LFM2.5 Audio 1.5B.
+
+It then aborted with this key error:
+
+weight tensor not found: decoder.layers.0.conv.weight
+
+Interpretation: the older runner likely expects the older LFM2 audiodecoder tensor layout, while LFM2.5 uses a different vocoder stack.
+
+Conclusion: generic llama-server works for local text inference, and the old LFM2 audio runner executes, but LFM2.5 full audio likely requires the proper Liquid LFM2.5 runner or newer custom llama.cpp support.
