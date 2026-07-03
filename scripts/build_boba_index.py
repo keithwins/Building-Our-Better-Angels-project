@@ -24,10 +24,22 @@ MANIFEST_PATH = os.path.join(INDEX_DIR, "chunk_manifest.jsonl")
 EMBEDDINGS_PATH = os.path.join(INDEX_DIR, "embeddings.npy")
 OLLAMA_URL = "http://localhost:11434/api/embeddings"
 MODEL = "nomic-embed-text"
+EXCLUDED_PATH_PARTS = {
+    ".git",
+    "__pycache__",
+    "docs/probe-set/archive",
+}
 
 
 def find_md_files(root):
     for dirpath, _, filenames in os.walk(root):
+        rel_dir = os.path.relpath(dirpath, REPO_ROOT)
+        rel_dir_posix = "." if rel_dir == "." else rel_dir.replace(os.sep, "/")
+        if any(
+            rel_dir_posix == excluded or rel_dir_posix.startswith(f"{excluded}/")
+            for excluded in EXCLUDED_PATH_PARTS
+        ):
+            continue
         for fname in sorted(filenames):
             if fname.endswith(".md"):
                 yield os.path.join(dirpath, fname)

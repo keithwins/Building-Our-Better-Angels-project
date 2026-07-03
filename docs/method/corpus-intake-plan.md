@@ -68,3 +68,9 @@
 - [ ] What is the privacy boundary for Fog writing?
 - [ ] Is the Walk intended to be public in the repo, or is it manuscript-private?
 - [ ] Should `docs/manuscript/` be a public folder, or should it live outside the repo until ready?
+
+## 2026-07-03 Intake Queue
+
+See `docs/method/boba-corpus-intake-queue-v0.md` for the current
+preserve-first/promote-later workflow using Porter and Asterisms, plus the first
+set of loose-document decisions.
