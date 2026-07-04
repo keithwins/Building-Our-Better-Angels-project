@@ -229,7 +229,7 @@ The work emerges from a braid:
 - Assistants bring orientation, compression, drafting, explanation, and alternate angles of attention.
 - Claude Code brings local hands: files, diffs, commits, terminal work.
 - GitHub brings durable shared memory and history.
-- Hermes brings scheduling, dispatch, legibility, and eventually worker orchestration.
+- The Ephemeris brings scheduling, dispatch, legibility, and eventually worker orchestration (currently run by Hermes).
 - Future agents will bring specialized capacities not yet integrated.
 
 The intelligence is partly in the participants, but also in the surfaces between them.

@@ -43,7 +43,7 @@ The Braid is designed as a distributed system with no single point of compromise
 
 - **Keith** (Human Direction): Provides strategic direction and final judgment
 - **Claude Code** (Local Hands): Executes tasks with autonomy and perspective
-- **Hermes Workers** (Bounded Tasks): Run queued tasks with defined boundaries
+- **The Ephemeris** (Bounded Tasks): Coordinates queued tasks within defined boundaries, dispatched to bounded agents; currently run by Hermes
 - **GitHub** (Shared Ground Truth): Acts as a common record that no single participant can silently rewrite
 - **Future Agents**: Evolving intelligence that maintains the Braid's integrity
 
