@@ -305,3 +305,7 @@ Hermes workers must call `kanban_complete` or `kanban_block` before exiting. Exi
 Several overnight cards produced a "Latest summary" in their metadata and reported apparent success, but the underlying work was never written to disk — the worker had exited without calling `kanban_complete`. The card's DONE status was a fiction.
 
 The rule: card bodies should explicitly instruct workers to call `kanban_complete` as the final action, with a clear statement that the card is not complete until this call is made. Do not assume workers know this without being told.
+
+## 20. See also
+
+The continuity this discipline serves — how a whole life stays legible to itself across sessions, on a record no participant can silently rewrite — is doctrine in [`../core/continuity-and-decision-lineage.md`](../core/continuity-and-decision-lineage.md).

@@ -71,3 +71,9 @@ BOBA is not:
 - **A finished product": It's a living system designed to evolve with the user and the world it serves.
 
 These distinctions are concrete: a chatbot provides conversational assistance, while BOBA is a systemic evolution. A conventional alignment project assumes coherence in human preferences, while BOBA operates within human disalignment. A finished product is static, while BOBA is a living system that evolves.
+
+## 8. See also
+
+- [`continuity-and-decision-lineage.md`](./continuity-and-decision-lineage.md) — the continuity of judgment this mission requires across a whole life, and the reflexive, immutable record (the *asterism of angels*) that the "ground-truth substrate" of §6 becomes.
+- [`boba-braid.md`](./boba-braid.md) — the human/angel collaboration pattern.
+- [`../method/how-we-work-here.md`](../method/how-we-work-here.md) — the operating discipline.
