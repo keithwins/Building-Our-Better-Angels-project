@@ -86,6 +86,7 @@ def run_eval(cases, chunks, embeddings, top_k):
 
         results.append({
             "id": case["id"],
+            "type": case.get("type", "unknown"),
             "query": case["query"],
             "acceptable_targets": case["acceptable_targets"],
             "hit_rank": hit_rank,

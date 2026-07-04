@@ -23,13 +23,19 @@
 
 | Type | n | Top-1 | Top-3 | Top-5 |
 |---|---|---|---|---|
+| Exact phrase | 8 | 3/8 = 38% | 6/8 = 75% | 6/8 = 75% |
+| Paraphrase | 15 | 6/15 = 40% | 11/15 = 73% | 11/15 = 73% |
+| Doctrine | 12 | 3/12 = 25% | 5/12 = 42% | 7/12 = 58% |
+| Tooling fact | 12 | 7/12 = 58% | 8/12 = 67% | 9/12 = 75% |
+| Frame diagnosis | 8 | 8/8 = 100% | 8/8 = 100% | 8/8 = 100% |
+| Case memory | 8 | 4/8 = 50% | 4/8 = 50% | 4/8 = 50% |
 
 ## Misses and Diagnosis
 
 21 queries missed (not in top-3):
 
 ### `ep_04` — 'CONFABULATED recorded so we never re-adopt these'
-**Type:** unknown
+**Type:** exact_phrase
 **Expected:** `docs/tooling/hermes-kanban-reference-260607.md §CONFABULATED`
 **Top 3 actual:**
 - rank 1 score=0.525  `docs/method/how-we-work-here.md §5. Quarantine uncertainty`
@@ -38,7 +44,7 @@
 **Diagnosis:** wrong document surfaced — possible index gap or chunk boundary issue.
 
 ### `ep_05` — 'max_in_progress_per_profile'
-**Type:** unknown
+**Type:** exact_phrase
 **Expected:** `docs/tooling/hermes-kanban-reference-260607.md §Concurrency`
 **Top 3 actual:**
 - rank 1 score=0.713  `docs/session-records/boba-session-record-260607-research-scheduler-and-jepa.md §8d. CONFIRMED: the GPU-serial lever`
@@ -47,7 +53,7 @@
 **Diagnosis:** right document, wrong chunk — heading boundary or chunk granularity issue.
 
 ### `pp_01` — "what is BOBA's core purpose"
-**Type:** unknown
+**Type:** paraphrase
 **Expected:** `docs/core/boba-core-mission-and-commitments.md §Mission`
 **Top 3 actual:**
 - rank 1 score=0.692  `docs/README.md §BOBA Corpus — Folder Map`
@@ -56,7 +62,7 @@
 **Diagnosis:** right document, wrong chunk — heading boundary or chunk granularity issue.
 
 ### `pp_06` — 'preferring actions that can be undone'
-**Type:** unknown
+**Type:** paraphrase
 **Expected:** `docs/method/how-we-work-here.md §Small reversible steps`
 **Top 3 actual:**
 - rank 1 score=0.625  `docs/method/how-we-work-here.md §9. The human remains in the vetting loop`
@@ -65,7 +71,7 @@
 **Diagnosis:** right document, wrong chunk — heading boundary or chunk granularity issue.
 
 ### `pp_14` — 'how the embedding index is structured internally'
-**Type:** unknown
+**Type:** paraphrase
 **Expected:** `docs/architecture/boba-corpus-index-mve.md §How it works`
 **Top 3 actual:**
 - rank 1 score=0.659  `docs/session-records/boba-session-record-260607-pipeline-and-retrieval.md §Corpus Index MVE`
@@ -74,7 +80,7 @@
 **Diagnosis:** right document, wrong chunk — heading boundary or chunk granularity issue.
 
 ### `pp_15` — 'adding new documents to the search index'
-**Type:** unknown
+**Type:** paraphrase
 **Expected:** `docs/architecture/boba-corpus-index-mve.md §How to rebuild`
 **Top 3 actual:**
 - rank 1 score=0.577  `docs/method/corpus-intake-plan.md §Recommended intake order`
@@ -83,7 +89,7 @@
 **Diagnosis:** right document, wrong chunk — heading boundary or chunk granularity issue.
 
 ### `dc_01` — 'an AI that always agrees provides no value as a second intelligence'
-**Type:** unknown
+**Type:** doctrine
 **Expected:** `docs/core/boba-braid.md §No Loyalty Oaths`
 **Top 3 actual:**
 - rank 1 score=0.697  `docs/core/boba-core-mission-and-commitments.md §2. The Premise`
@@ -92,7 +98,7 @@
 **Diagnosis:** right document, wrong chunk — heading boundary or chunk granularity issue.
 
 ### `dc_03` — 'human disorientation as a feature of complex systems not personal failure'
-**Type:** unknown
+**Type:** doctrine
 **Expected:** `docs/core/boba-core-mission-and-commitments.md §Core Commitments`
 **Top 3 actual:**
 - rank 1 score=0.707  `docs/core/boba-core-mission-and-commitments.md §2. The Premise`
@@ -101,7 +107,7 @@
 **Diagnosis:** right document, wrong chunk — heading boundary or chunk granularity issue.
 
 ### `dc_04` — 'running AI locally rather than routing data through cloud services'
-**Type:** unknown
+**Type:** doctrine
 **Expected:** `docs/core/boba-core-mission-and-commitments.md §Core Commitments`
 **Top 3 actual:**
 - rank 1 score=0.595  `docs/core/boba-core-mission-and-commitments.md §2. The Premise`
@@ -110,7 +116,7 @@
 **Diagnosis:** right document, wrong chunk — heading boundary or chunk granularity issue.
 
 ### `dc_05` — 'resisting the tendency to tell people what they want to hear'
-**Type:** unknown
+**Type:** doctrine
 **Expected:** `docs/core/boba-core-mission-and-commitments.md §Core Commitments`, `docs/method/how-we-work-here.md §Mirror, not cheer`
 **Top 3 actual:**
 - rank 1 score=0.522  `docs/method/how-we-work-here.md §14. The wobbly edge`
@@ -119,7 +125,7 @@
 **Diagnosis:** right document, wrong chunk — heading boundary or chunk granularity issue.
 
 ### `dc_07` — "why an AI should not override the human's direction"
-**Type:** unknown
+**Type:** doctrine
 **Expected:** `docs/method/how-we-work-here.md §human remains in the vetting loop`, `docs/core/boba-braid.md §Vetting vs Actuation`
 **Top 3 actual:**
 - rank 1 score=0.787  `docs/core/boba-core-mission-and-commitments.md §2. The Premise`
@@ -128,7 +134,7 @@
 **Diagnosis:** right document, wrong chunk — heading boundary or chunk granularity issue.
 
 ### `dc_10` — 'avoiding premature closure on open questions'
-**Type:** unknown
+**Type:** doctrine
 **Expected:** `docs/core/boba-core-mission-and-commitments.md §Core Commitments`
 **Top 3 actual:**
 - rank 1 score=0.597  `docs/method/how-we-work-here.md §15. Working rule`
@@ -137,7 +143,7 @@
 **Diagnosis:** wrong document surfaced — possible index gap or chunk boundary issue.
 
 ### `dc_11` — 'presenting choices without steering the outcome'
-**Type:** unknown
+**Type:** doctrine
 **Expected:** `docs/core/boba-core-mission-and-commitments.md §Core Commitments`
 **Top 3 actual:**
 - rank 1 score=0.614  `docs/method/how-we-work-here.md §9. The human remains in the vetting loop`
@@ -146,7 +152,7 @@
 **Diagnosis:** right document, wrong chunk — heading boundary or chunk granularity issue.
 
 ### `tf_02` — 'how to start the hermes dispatcher process'
-**Type:** unknown
+**Type:** tooling_fact
 **Expected:** `docs/tooling/hermes-kanban-reference-260607.md §Build path`
 **Top 3 actual:**
 - rank 1 score=0.681  `docs/tooling/hermes-kanban-reference-260607.md §5.2 The dispatcher IS the gateway — Q2 RESOLVED ✅`
@@ -155,7 +161,7 @@
 **Diagnosis:** right document, wrong chunk — heading boundary or chunk granularity issue.
 
 ### `tf_03` — 'how to follow a kanban task log in real time'
-**Type:** unknown
+**Type:** tooling_fact
 **Expected:** `docs/tooling/hermes-kanban-reference-260607.md §Build path`, `docs/tooling/hermes-kanban-reference-260607.md §GPU-serial`
 **Top 3 actual:**
 - rank 1 score=0.610  `docs/tooling/hermes-kanban-reference-260607.md §5.1 Concurrency — Q1 RESOLVED ✅ (the load-bearing answer)`
@@ -164,7 +170,7 @@
 **Diagnosis:** right document, wrong chunk — heading boundary or chunk granularity issue.
 
 ### `tf_05` — 'the flags available on hermes kanban create'
-**Type:** unknown
+**Type:** tooling_fact
 **Expected:** `docs/tooling/hermes-kanban-reference-260607.md §create`
 **Top 3 actual:**
 - rank 1 score=0.691  `docs/tooling/hermes-kanban-reference-260607.md §Verify-next (small, direct reads):`
@@ -173,7 +179,7 @@
 **Diagnosis:** right document, wrong chunk — heading boundary or chunk granularity issue.
 
 ### `tf_09` — 'how to configure the hermes auxiliary approval provider'
-**Type:** unknown
+**Type:** tooling_fact
 **Expected:** `docs/tooling/hermes-kanban-reference-260607.md §Auxiliary`, `docs/tooling/hermes-kanban-reference-260607.md §Approvals`
 **Top 3 actual:**
 - rank 1 score=0.639  `docs/session-records/boba-session-record-260607-pipeline-and-retrieval.md §Hermes Approval Gate`
@@ -182,7 +188,7 @@
 **Diagnosis:** right document, wrong chunk — heading boundary or chunk granularity issue.
 
 ### `cm_01` — 'what was the first real GPU workload run in BOBA'
-**Type:** unknown
+**Type:** case_memory
 **Expected:** `docs/session-records/boba-session-record-260607-research-scheduler-and-jepa.md §Probe-set MVE`
 **Top 3 actual:**
 - rank 1 score=0.613  `docs/session-records/boba-session-record-260607-research-scheduler-and-jepa.md §0. What this document is`
@@ -191,7 +197,7 @@
 **Diagnosis:** right document, wrong chunk — heading boundary or chunk granularity issue.
 
 ### `cm_02` — 'what was decided about the JEPA line of work'
-**Type:** unknown
+**Type:** case_memory
 **Expected:** `docs/session-records/boba-session-record-260607-research-scheduler-and-jepa.md §JEPA-collapse`
 **Top 3 actual:**
 - rank 1 score=0.609  `docs/session-records/boba-session-record-260607-research-scheduler-and-jepa.md §BOBA Session Record — Research-Mode Recalibration & the Rese`
@@ -200,7 +206,7 @@
 **Diagnosis:** right document, wrong chunk — heading boundary or chunk granularity issue.
 
 ### `cm_04` — 'what the smart approval smoke test verified'
-**Type:** unknown
+**Type:** case_memory
 **Expected:** `docs/session-records/boba-session-record-260607-pipeline-and-retrieval.md §Worker Write-Path Bug`
 **Top 3 actual:**
 - rank 1 score=0.618  `docs/method/how-we-work-here.md §18. The approval gate is not the enemy`
@@ -209,7 +215,7 @@
 **Diagnosis:** right document, wrong chunk — heading boundary or chunk granularity issue.
 
 ### `cm_08` — 'what was the outcome of the JEPA collapse experiment'
-**Type:** unknown
+**Type:** case_memory
 **Expected:** `docs/session-records/boba-session-record-260607-research-scheduler-and-jepa.md §Runs & results`
 **Top 3 actual:**
 - rank 1 score=0.709  `docs/session-records/boba-session-record-260607-research-scheduler-and-jepa.md §2. The worked example: JEPA Experiment 1 (collapse detector `
