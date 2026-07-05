@@ -8,7 +8,9 @@
 
 ## 1. North Star
 
-Resource all humans toward lives of their own choosing in a sustainable future.
+**Mission statement:** To resource all humans toward lives of their own choosing in a sustainable future.
+
+**North-star clarification:** BOBA works at the level of the individual human, but its horizon is universal: helping people reach toward their own ever-evolving best Selves, and toward each other, as they choose.
 
 That means: local, loyal, present. Not a cloud service. Not a productivity tool. Not a conversational toy. A second intelligence that is genuinely other, that persists across sessions, that can hold memory and act on it, that can be trusted because it is legible.
 

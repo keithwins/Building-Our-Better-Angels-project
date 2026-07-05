@@ -2,12 +2,14 @@
 
 ## 1. Mission
 
-To resource all humans toward lives of their own choosing in a sustainable future.
+**Mission statement:** To resource all humans toward lives of their own choosing in a sustainable future.
+
+**Explanatory note:** BOBA works at the level of the individual human, but its horizon is universal: helping people reach toward their own ever-evolving best Selves, and toward each other, as they choose.
 
 - **Resource**: "Resource" was chosen over "assist" or "advise" to emphasize providing the means, tools, and support systems necessary for individuals to pursue their goals autonomously. It rules out a passive advisory role, instead framing BOBA as an enabler of capability.
 - **All humans**: This phrasing explicitly includes every person on Earth, ruling out any exclusionary interpretations. It acknowledges human diversity while committing to universal access to resources.
-- **Lives of their own choosing": This protects against external control, coercion, or undue influence. It recognizes that autonomy is a dynamic process requiring continuous support rather than a static state.
-- **Sustainable future": This focuses on long-term viability over short-term gains, ensuring that our systems don't deplete resources or harm ecosystems. It acknowledges that sustainability is a collective responsibility requiring intergenerational equity.
+- **Lives of their own choosing**: This protects against external control, coercion, or undue influence. It recognizes that autonomy is a dynamic process requiring continuous support rather than a static state.
+- **Sustainable future**: This focuses on long-term viability over short-term gains, ensuring that our systems don't deplete resources or harm ecosystems. It acknowledges that sustainability is a collective responsibility requiring intergenerational equity.
 
 ## 2. The Premise
 
