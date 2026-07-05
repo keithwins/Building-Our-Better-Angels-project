@@ -158,6 +158,12 @@ Concretely for v0:
 - **Store:** A single append-only text file `ephemeris-log.jsonl` under the Ephemeris home (default `~/.ephemeris/`, overridable by `EPHEMERIS_HOME`). There is **no SQLite database in v0**. This eliminates dual-write drift structurally. SQLite is deferred to v1 purely as a rebuildable, derived index.
 - **Locked local appends:** Writers take an exclusive file lock while reading the current head, validating the candidate event, and appending the next line. This protects local multi-agent writes from parent-hash races.
 - **Cryptographic hash chain:** Each JSON line in the log contains a `parent_hash` (the SHA-256 hash of the preceding line) and its own `hash` (SHA-256 of its content including the `parent_hash`). The reader validates this chain on every query. It detects in-place edits, reordered lines, and missing middle lines. It **does not by itself prove that the tail was not truncated**; that requires an external head hash or Asterisms anchor.
+- **Manual head anchors:** v0 uses explicit Asterisms records as outside witnesses
+  for selected Ephemeris log heads. The first design note is
+  `ast:material:20260705T024146Z-A310C6`; the first literal head-anchor record is
+  `ast:material:20260705T025112Z-154K6Q`, witnessing event count `11`, latest event
+  `eph:event:20260705T024208Z-16FC`, and head hash
+  `be448b30598235c81b0f90789555813aa171e071936cb4289ff5828d54d98bfd`.
 - **Projections:** Reads like `now` are computed on the fly by doing an in-memory fold over the JSONL log from beginning to end.
 - **Score lifecycle enforcement:** Score mutations are fold-validated inside the append lock before commit. Invalid claims/updates/abandons do not enter the log; duplicate opens are rejected; `closed` and `abandoned` scores are terminal.
 - **IDs:** Follow the Asterisms grammar where implemented: `eph:participant:<role>:<name>:<session>`, `eph:score:<UTCstamp>-<suffix>`, `eph:event:<UTCstamp>-<suffix>`. Position reports are events in v0, not separate `eph:position:` objects.
@@ -165,9 +171,9 @@ Concretely for v0:
 
 ## 5. Scope — what v0 is and is not
 
-**v0 does:** append position and score events to `ephemeris-log.jsonl`; lock local writes; prevalidate score mutations before commit; compute the active state (`now`) via an in-memory fold over the log; enforce that consequential closes/handoffs carry a valid `ast:` identifier; validate the SHA-256 hash chain on all events; follow the implemented id grammar; be usable by hand from a CLI.
+**v0 does:** append position and score events to `ephemeris-log.jsonl`; lock local writes; prevalidate score mutations before commit; compute the active state (`now`) via an in-memory fold over the log; enforce that consequential closes/handoffs carry a valid `ast:` identifier; validate the SHA-256 hash chain on all events; support manual Asterisms head-anchor records as an operating protocol; follow the implemented id grammar; be usable by hand from a CLI.
 
-**v0 does *not* (yet):** use SQLite (postponed to v1); prove tail non-truncation without an external head/anchor; automate the creation of Asterisms records (only enforces that an ID is provided for consequential closes); integrate Hermes; do any network/multi-host sync; enforce auth between participants; interpolate trajectories.
+**v0 does *not* (yet):** use SQLite (postponed to v1); prove tail non-truncation without checking an external head/anchor; automate the creation of Asterisms records (only enforces that an ID is provided for consequential closes); integrate Hermes; do any network/multi-host sync; enforce auth between participants; interpolate trajectories.
 
 ## 6. Open questions (quarantined — [how-we-work-here.md](../method/how-we-work-here.md) §5)
 
@@ -178,11 +184,13 @@ Concretely for v0:
 - **Participant registry.** v0 requires structured IDs to avoid collision, but a formal agent registration/vetting handshake is deferred.
 - **Promotion trigger.** Automatic on every `close`, or explicit `--promote`?
   Leaning explicit for v0 (Keith decides what's consequential), automatic later.
-- **Head anchoring.** The next integrity milestone is anchoring the current log
-  head hash into Asterisms periodically or on consequential transitions, so tail
-  truncation becomes detectable.
+- **Head anchoring automation.** The v0 manual protocol is proven once. The next
+  integrity milestone is an inspectable `ephemeris head` read and, later, an
+  `ephemeris anchor` command that can create the Asterisms head-anchor record
+  directly.
 
 ---
 
-*This spec is provisional but implemented. Next step: dogfood real scores and then
-add Asterisms head anchoring once the CLI shape has survived ordinary use.*
+*This spec is provisional but implemented. The next useful movement is making the
+manual head-anchor protocol easier to inspect without changing the lightweight v0
+shape.*
