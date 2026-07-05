@@ -62,9 +62,13 @@ doesn't have to). A participant publishes:
 `UPDATE`; a new position is a new row.
 
 ### 2b. Score — *the unit of chartered work* (charter §3, Halprin)
-A score is **bounded constraints within which an agent improvises** — not a task
-on a conveyor belt. It has a lifecycle, expressed as append-only **events** (never
-in-place edits). We explicitly separate the immutable definition of a score from its active state:
+A score is **bounded constraints within which an agent improvises** — not a task,
+ticket, command, or conveyor-belt work item. It frames a playable field: what
+concern is being attended to, what boundaries matter, when to stop, and what must
+survive. The outcome may be code, a document, a decision to defer, or a clearer
+question. It has a lifecycle, expressed as append-only **events** (never in-place
+edits). We explicitly separate the immutable definition of a score from its
+active state:
 
 **Score Identity (Immutable Genesis):**
 Established at the `open` event:
@@ -75,6 +79,10 @@ Established at the `open` event:
 | `boundaries`    | the constraints inside which the doing stays open              |
 | `stop`          | stop conditions — when to halt (done, or halt-and-report)      |
 | `survives`      | what must survive / be true at the end (invariants)           |
+
+Example score concern: "Find the smallest trustworthy treatment of Ephemeris head
+integrity." Non-example: "Implement `ephemeris anchor`." The latter may be an
+outcome of playing the score, but it should not be mistaken for the score itself.
 
 **Score Folded State (Mutable Projection):**
 Derived dynamically by parsing the subsequent event log:
