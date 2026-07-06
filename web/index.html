@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building Our Better Angels — Orientation Surface</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Global Bar -->
+  <header class="glass">
+    <div class="logo-area">
+      <div class="logo-circle"></div>
+      <h1>Building Our Better Angels</h1>
+      <span>v260705T1839</span>
+    </div>
+    <div class="reader-metadata" id="global-status">
+      Sanctuary Local Mode &bull; Tailscale Active &bull; RTX 5070 Ti Baseline
+    </div>
+  </header>
+
+  <!-- Split Panel Workspace -->
+  <div class="workspace">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="glass">
+      
+      <!-- Resonator Search Box -->
+      <div class="resonator-box">
+        <div class="resonator-input-wrapper">
+          <span class="resonator-icon">🕯️</span>
+          <input type="text" id="resonator-search" class="resonator-input" placeholder="Hold a thought to resonate...">
+        </div>
+      </div>
+
+      <!-- Navigation Sections -->
+      <div class="nav-section">
+        <div class="nav-section-title">Orientation</div>
+        <ul class="nav-list">
+          <li class="nav-item active" data-target="book-publishing-plan.md" data-category="core">Book Publishing Plan</li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">The Braid (Narrative)</div>
+        <ul class="nav-list">
+          <li class="nav-item" data-target="the_fog_260629.md" data-category="essays">Introduction: The Fog</li>
+          <li class="nav-item" data-target="the-wobbly-edge.md" data-category="essays">Chapter 1: The Wobbly Edge</li>
+          <li class="nav-item" data-target="boba-core-mission-and-commitments.md" data-category="core">Chapter 2: The Multitude</li>
+          <li class="nav-item" data-target="on-scores-and-harnesses.md" data-category="essays">Chapter 3: The Braid & Play</li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">Core Charters</div>
+        <ul class="nav-list">
+          <li class="nav-item" data-target="resonator-charter.md" data-category="core">The Resonator Charter</li>
+          <li class="nav-item" data-target="glossary-and-ontology.md" data-category="core">Glossary & Ontology</li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">Extracted Essays</div>
+        <ul class="nav-list">
+          <li class="nav-item" data-target="Vital Continuity Layer 260629.md" data-category="essays">Vital Continuity Layer</li>
+          <li class="nav-item" data-target="Asterisms260702.md" data-category="essays">Asterisms Ledger</li>
+          <li class="nav-item" data-target="Relational Spatiotemporal Acoustic Odometry.md" data-category="essays">RSAO (Understory)</li>
+          <li class="nav-item" data-target="BOBA_Architecture_Refined_v1.1.md" data-category="essays">Architecture Refined</li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">Asterisms Registry Subproject</div>
+        <ul class="nav-list">
+          <li class="nav-item" data-target="first-card.md" data-category="asterisms">First Card (MVE Scope)</li>
+          <li class="nav-item" data-target="registry-and-lineage-contract-v0.1.md" data-category="asterisms">Ledger Contract Specification</li>
+          <li class="nav-item" data-target="implementation-report-v0.md" data-category="asterisms">Implementation Report</li>
+          <li class="nav-item" data-target="porter-integration-v0.md" data-category="asterisms">Porter Integration Specs</li>
+          <li class="nav-item" data-target="Asterisms-Ledger.md" data-category="asterisms">Ledger Grammar & Durability</li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">Interagency Portal</div>
+        <ul class="nav-list">
+          <li class="nav-item" data-target="salon.html" data-category="special">Interagency Salon (iOS)</li>
+          <li class="nav-item" data-target="interagency-orientation-surface-v0.md" data-category="architecture">iOS Specification</li>
+          <li class="nav-item" data-target="CHARTER.md" data-category="salon_core">Salon Participation Charter</li>
+        </ul>
+      </div>
+
+      <!-- Ingress Log Simulation (Porter Flow) -->
+      <div class="nav-section" style="margin-top: auto; border-top: 1px solid var(--border-color); padding-top: 20px;">
+        <div class="nav-section-title">Porter Ingress Stream</div>
+        <ul class="nav-list" id="ingress-log" style="font-family: var(--font-mono); font-size: 11px; padding: 0 10px;">
+          <li style="color: var(--text-muted); margin-bottom: 6px;">[18:23] Web extension capture</li>
+          <li style="color: var(--text-secondary);">→ boba_work/00-incoming/</li>
+          <li style="color: var(--accent-amber); font-weight: 500;">✓ Ingested to Asterisms</li>
+        </ul>
+      </div>
+
+    </aside>
+
+    <!-- Reader Main Content Canvas -->
+    <main>
+      <div class="reader-header">
+        <div class="reader-metadata" id="document-lineage">
+          ast:material:20260705T180025Z-BOOKPLAN
+        </div>
+        <div class="reader-metadata" id="document-status">
+          CANONICAL PLAN &bull; COMMITTED
+        </div>
+      </div>
+      <div class="reader-canvas">
+        <article class="markdown" id="content-canvas">
+          <!-- Loaded Markdown Content Injected Here -->
+        </article>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="app.js"></script>
+  <script src="salon.js"></script>
+</body>
+</html>
