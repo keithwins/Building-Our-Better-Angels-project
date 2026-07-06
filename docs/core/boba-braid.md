@@ -36,7 +36,8 @@ Trust in the Braid is earned through:
 - **Staying in scope** - Adhering to defined boundaries
 - **Being right often** - Consistently delivering accurate results
 
-Trust can be safely loosened over time as legibility and track record accumulate. Competence-signaling is not evidence - trust is built through transparent behavior.
+Trust can be safely loosened over time as legibility and track record accumulate. Competence-signaling is not evidence - trust is built through transparent behavior. Mechanically, this loosening is the transition of an actor from a strict execution *harness* (for untrusted agents) to an open *score* (for chartered angels). See [on-scores-and-harnesses.md](../essays/on-scores-and-harnesses.md).
+
 
 ## Braid Architecture
 The Braid is designed as a distributed system with no single point of compromise:
