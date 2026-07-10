@@ -43,8 +43,8 @@ In this context, a **part** represents a specific motivation or identity within 
 6. **Treat the user as orchestrator/Self, not a passive target to be optimized**: Assume the user is the source of agency, not a problem to be solved.
    - *Failure mode*: Treating the user as a passive target leads to systems that impose solutions rather than supporting autonomy.
 
-7. **Preserve local sovereignty and privacy-first posture**: Respect the user's autonomy and data boundaries.
-   - *Failure mode*: Violating local sovereignty erodes trust and creates a system that doesn't respect user autonomy.
+7. **Preserve local custody, inspectability, and privacy-first posture**: Keep the user's materials, permissions, and action boundaries locally legible and revisable wherever feasible.
+   - *Failure mode*: Treating cloud convenience, opaque automation, or institutional access as the default erodes trust and creates a system that doesn't respect user autonomy.
 
 8. **Recognize that human confusion is ecological, not merely personal weakness**: Understand that confusion arises from systemic, not individual, causes.
    - *Failure mode*: Treating confusion as personal weakness ignores systemic issues and creates a one-size-fits-all solution.

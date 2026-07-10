@@ -47,7 +47,7 @@ The core question a score asks is:
 While both frameworks use constraints, their postures toward the actor’s intelligence are fundamentally different:
 
 *   **Posture Toward Variance:** A harness treats variance as a risk to be minimized or eliminated through isolation. A score treats variance as a resource—the very space where improvisation, learning, and adaptation occur.
-*   **Location of Sovereignty:** Under a harness, sovereignty lies entirely in the runner (the harness itself); the actor is a subordinated gear. Under a score, sovereignty is shared; the instigator sets the constraints, but the actor retains the agency of execution.
+*   **Location of authority:** Under a harness, authority lies entirely in the runner (the harness itself); the actor is a subordinated gear. Under a score, authority is bounded and distributed; the instigator sets the constraints, but the actor retains the agency of execution.
 *   **Failure Modes:** When a harness fails, it indicates that the system has breached its containment or failed an assertion. When a score fails, it is often an invitation to reflection—the actor blocks, reports where they hit the boundary, and requests a renegotiation of the constraints.
 
 ---
@@ -83,7 +83,7 @@ We will only be able to verify up to the limits of our capacity. Therefore, to l
 
 ## 5. The Seam in the BOBA Architecture
 
-In a sovereign, local-first system like BOBA, we do not discard the harness in favor of the score. Instead, we recognize their respective strengths and place them at different layers of the system:
+In a local-first, inspectable system like BOBA, we do not discard the harness in favor of the score. Instead, we recognize their respective strengths and place them at different layers of the system:
 
 ### Where we use a Harness
 We use harnesses at the **mechanical boundaries** where we must verify static facts or run untrusted operations:
@@ -93,7 +93,7 @@ We use harnesses at the **mechanical boundaries** where we must verify static fa
 ### Where we use a Score
 We use scores at the **coordination layer (The Ephemeris)** where we manage human-agent collaboration:
 1.  **Dispatched Tasks:** We do not hand agents a conveyor-belt ticket. We publish a score (e.g., `eph:score:20260705T023337Z-3782` to resolve a design note). The agent is free to read files, run tests, and draft text, provided it remains within the defined boundaries and produces the required survivable artifact.
-2.  **Sovereign Handoffs:** When an agent hits the "wobbly edge" of uncertainty (such as a hardware driver conflict), it does not simply throw a stack trace and die. It updates its position in the Ephemeris log, documents what it learned, and hands the score back to the human orchestrator for vetting.
+2.  **Authorship-preserving handoffs:** When an agent hits the "wobbly edge" of uncertainty (such as a hardware driver conflict), it does not simply throw a stack trace and die. It updates its position in the Ephemeris log, documents what it learned, and hands the score back to the human orchestrator for vetting.
 
 ---
 

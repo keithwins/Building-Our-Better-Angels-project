@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Building Our Better Angels: Tonight Reader v0 260707</title>
+  <style>
+:root {
+  --paper: #f8f0df;
+  --paper-deep: #efe1c5;
+  --ink: #241a12;
+  --muted: #6c5a45;
+  --faint: #9a876d;
+  --rule: #d7c3a1;
+  --accent: #8f3d1f;
+  --accent-soft: #b46336;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 10% 0%, rgba(180, 99, 54, 0.14), transparent 28rem),
+    linear-gradient(135deg, #d9c49c 0%, #efe2c7 42%, #c7d0bd 100%);
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: 18px;
+  line-height: 1.58;
+}
+
+.book {
+  width: min(100%, 8.2in);
+  margin: 2rem auto;
+  padding: 0.72in;
+  background:
+    linear-gradient(90deg, rgba(95, 65, 36, 0.045), transparent 1.2rem),
+    var(--paper);
+  box-shadow: 0 2rem 4rem rgba(52, 34, 16, 0.28);
+}
+
+.title-page {
+  min-height: 8.6in;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--rule);
+  padding: 0.72in 0.62in;
+  background:
+    radial-gradient(circle at 90% 8%, rgba(143, 61, 31, 0.13), transparent 11rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.34), transparent 45%);
+}
+
+.eyebrow,
+.chapter-kicker,
+.colophon {
+  color: var(--muted);
+  font-family: "Gill Sans", "Optima", "Avenir Next", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.title-page h1 {
+  max-width: 5.7in;
+  margin: 1.7in 0 0;
+  font-size: clamp(3.4rem, 9vw, 5.7rem);
+  line-height: 0.92;
+  letter-spacing: -0.055em;
+}
+
+.title-page h2 {
+  margin: 1.2rem 0 0;
+  color: var(--accent);
+  font-size: 1.35rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.title-page .motto {
+  max-width: 4.4in;
+  margin: 2rem 0 0;
+  color: var(--muted);
+  font-size: 1.15rem;
+  font-style: italic;
+}
+
+.title-page .stamp {
+  display: grid;
+  gap: 0.28rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.contents {
+  margin: 3rem 0 4rem;
+  padding: 1.4rem 1.5rem;
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--rule);
+}
+
+.contents h2 {
+  margin: 0 0 1rem;
+  color: var(--accent);
+  font-family: "Gill Sans", "Optima", "Avenir Next", sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.contents ol {
+  margin: 0;
+  padding-left: 1.3rem;
+}
+
+.contents li { margin: 0.35rem 0; }
+.contents a { color: var(--ink); text-decoration: none; }
+
+.chapter {
+  margin: 4.5rem 0 0;
+}
+
+.chapter > h1 {
+  margin: 0.18rem 0 1.45rem;
+  font-size: clamp(2rem, 5vw, 3.15rem);
+  line-height: 1.03;
+  letter-spacing: -0.035em;
+}
+
+.chapter h2 {
+  margin: 2rem 0 0.65rem;
+  color: var(--accent);
+  font-family: "Gill Sans", "Optima", "Avenir Next", sans-serif;
+  font-size: 0.92rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.chapter h3 {
+  margin: 1.6rem 0 0.45rem;
+  color: var(--accent-soft);
+  font-size: 1.15rem;
+}
+
+p {
+  margin: 0 0 0.88rem;
+}
+
+.prologue p:first-of-type::first-letter {
+  float: left;
+  padding: 0.04em 0.08em 0 0;
+  color: var(--accent);
+  font-size: 4.8rem;
+  line-height: 0.78;
+}
+
+blockquote {
+  margin: 1.35rem 0;
+  padding: 0.25rem 0 0.25rem 1.15rem;
+  border-left: 3px solid var(--accent);
+  color: #3b2a1d;
+  font-size: 1.13rem;
+  font-style: italic;
+}
+
+blockquote p { margin: 0; }
+
+ul, ol {
+  margin: 0.4rem 0 1rem 1.15rem;
+  padding-left: 1rem;
+}
+
+li { margin: 0.32rem 0; }
+
+code {
+  padding: 0.08em 0.22em;
+  border-radius: 0.2em;
+  background: rgba(75, 48, 25, 0.09);
+  color: #3f2415;
+  font-family: "Input Mono", "Cascadia Mono", "Courier New", monospace;
+  font-size: 0.86em;
+}
+
+hr {
+  width: 35%;
+  margin: 2.2rem auto;
+  border: 0;
+  border-top: 1px solid var(--rule);
+}
+
+table {
+  width: 100%;
+  margin: 1rem 0 1.3rem;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+  line-height: 1.35;
+}
+
+th, td {
+  padding: 0.42rem 0.48rem;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+
+th {
+  color: var(--accent);
+  font-family: "Gill Sans", "Optima", "Avenir Next", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.backmatter {
+  color: #3d3025;
+  font-size: 0.94rem;
+}
+
+.backmatter .chapter-kicker::after {
+  content: " / back matter";
+}
+
+.reading-note {
+  margin: 2.4rem 0;
+  padding: 1.1rem 1.25rem;
+  border-left: 4px solid var(--accent);
+  background: rgba(255, 255, 255, 0.28);
+  color: var(--muted);
+  font-size: 0.97rem;
+}
+
+a { color: var(--accent); }
+
+@media print {
+  @page {
+    size: letter;
+    margin: 0.72in 0.78in 0.82in;
+  }
+
+  body {
+    background: white;
+    font-size: 11.2pt;
+  }
+
+  .book {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    background: white;
+    box-shadow: none;
+  }
+
+  .title-page {
+    min-height: 9.05in;
+    break-after: page;
+  }
+
+  .contents {
+    break-after: page;
+  }
+
+  .chapter {
+    break-before: page;
+    margin-top: 0;
+  }
+
+  .chapter > h1 {
+    break-after: avoid;
+  }
+
+  h1, h2, h3, blockquote, table {
+    break-inside: avoid;
+  }
+}
+</style>
+</head>
+<body>
+  <main class="book">
+    <section class="title-page">
+      <div class="eyebrow">Tonight reading copy / reader-v0 / 260707</div>
+      <div>
+        <h1>Building Our Better Angels</h1>
+        <h2>An Invitation Reader</h2>
+        <p class="motto">A door in the fog; not the finished house.</p>
+      </div>
+      <div class="stamp">
+        <span>Keith-copy: print, read, mark, revise.</span>
+        <span>Not a trusted-reader release.</span>
+        <span>Built from docs/manuscript/reader-v0.</span>
+      </div>
+    </section>
+
+    <nav class="contents" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#note">A Note on This Copy</a></li>
+<li><a href="#prologue">Prologue: The Door In The Fog</a></li>
+<li><a href="#map">A Map of the Book</a></li>
+<li><a href="#field-notes">First Field Notes</a></li>
+<li><a href="#open-gates">Open Gates</a></li>
+<li><a href="#appendix-g">Appendix G: Manuscript Lineage Ledger</a></li>
+      </ol>
+    </nav>
+
+    <div class="reading-note">
+      This edition is intentionally book-like rather than final: generous margins,
+      a familiar reading rhythm, rough gates moved to the back, and enough source
+      lineage to stay honest without making the first pass feel like repo work.
+    </div>
+
+    <section id="note" class="chapter frontmatter">
+  <div class="chapter-kicker">Building Our Better Angels</div>
+  <h1>A Note on This Copy</h1>
+  <p>This is not the book.</p>
+<p>It is the first local instrument for hearing whether the book is beginning to sound like itself.</p>
+<p>The project behind it is larger than prose: code, ledgers, scores, elderhood sketches, Asterisms records, Salon comments, architecture documents, and a long attempt to make intelligence useful without making life smaller. A finished book would be irresponsible if it tried to carry every pipe. A useful reader has a different job.</p>
+<p>It should help a person recognize the fog, feel the shape of the braid, see why ordinary alignment language is too thin, understand why memory needs receipts, and believe that better forms of collaborative intelligence might be built without requiring obedience, exposure, or surrender.</p>
+<p>It should also leave room to object.</p>
+<p>The central promise is not that BOBA is complete. It is not even that BOBA is right. The promise is that there is a collaboration worth attempting here, and that the invitation can be made beautiful, honorable, funny, rigorous, and concrete enough for other intelligences to enter.</p>
+<h2>What To Listen For</h2>
+<p>Listen first for recognition:</p>
+<blockquote><p>I know this fog.</p></blockquote>
+<p>Then for relief:</p>
+<blockquote><p>Maybe this is not only my private failure.</p></blockquote>
+<p>Then for complication:</p>
+<blockquote><p>I am not one clean preference oracle, and neither is anyone else.</p></blockquote>
+<p>Then for discipline:</p>
+<blockquote><p>If intelligence is going to help here, it needs boundaries, receipts, inspectability, refusal, and earned trust.</p></blockquote>
+<p>Then for tenderness:</p>
+<blockquote><p>A life can narrow; a life can open.</p></blockquote>
+<p>Then for invitation:</p>
+<blockquote><p>There is work here I might help make real.</p></blockquote>
+<h2>What This Copy Is Allowed To Do Badly</h2>
+<p>This copy is allowed to have seams.</p>
+<p>It is allowed to say &quot;chapter seed&quot; where the book will later need a scene. It is allowed to expose source debts. It is allowed to mark doctrine as unsettled. It is allowed to leave the Multitude chapter under a source-lineage warning.</p>
+<p>It is not allowed to hide those facts.</p>
+<h2>What This Copy Must Not Do</h2>
+<p>It must not pretend the public/private boundary is settled.</p>
+<p>It must not print a contested forgetting mechanism as doctrine.</p>
+<p>It must not convert elderhood into helplessness, care into management, or Self-authorship into present-moment preference satisfaction.</p>
+<p>It must not sand off the comic truth where the pressure itself is funny.</p>
+<p>It must not make the angels into obedient servants, replacement authorities, or private landlords of memory.</p>
+</section>
+
+<section id="prologue" class="chapter prologue">
+  <div class="chapter-kicker">Building Our Better Angels</div>
+  <h1>Prologue: The Door In The Fog</h1>
+  <p>There is a moment before action when the world becomes too large.</p>
+<p>You are not confused because you are weak. You are confused because the thing in front of you is attached to too many other things.</p>
+<p>The appointment is not only an appointment. It is the lab result, the portal password, the question you forgot to write down, the medication whose name you cannot pronounce, the ride you have not arranged, the daughter trying not to sound worried, the bill in the pile, the memory of the last doctor who did not listen, the body that has become both home and stranger.</p>
+<p>The email is not only an email. It is the project, the promise, the thread you lost, the person who needs an answer, the decision whose context is scattered across five tools and three moods and one note you wrote at 1:17 a.m. because apparently the future of your life depends on a sentence hidden in a markdown file named something like <code>scratch-final-actually-use-this-one.md</code>.</p>
+<p>The choice is not only a choice. It is your fear, your fatigue, your appetite, your old wound doing its old job, your hope trying not to embarrass itself, your future self leaning backward through time with a clipboard and an expression that says: please, if possible, do not make this worse.</p>
+<p>This is the fog.</p>
+<p>Not fog as in ignorance. Not fog as in stupidity. Not fog as in a moral failure to be clear.</p>
+<p>Fog as in weather.</p>
+<p>Fog as in the condition of being inside a living system that no one can see all at once.</p>
+<p>We are nested intelligences trying to act inside frames we cannot step outside. We are bodies, histories, habits, families, institutions, phones, search boxes, feeds, forms, models, debts, griefs, calendars, and tiny miracles of endurance. We do not experience pure reality. We experience predictions, sensations, memories, hopes, maps, and whatever attention can still afford to hold.</p>
+<p>Then the world asks us to decide.</p>
+<p>Click this. Sign that. Choose a plan. Reply by Friday. Trust the summary. Accept the terms. Verify the file. Tell the doctor. Update the driver. Pick a school. Move the money. Forgive the person. Take the pill. Sell the house. Publish the book. Build the system that will help you build the system.</p>
+<p>There should be a word for the particular comedy of trying to resource human flourishing while losing an afternoon to a dependency conflict.</p>
+<p>There probably is a German word. If not, one of the angels will make one up and we will regret asking.</p>
+<p>This book begins from the claim that our confusion is not merely personal. It is ecological.</p>
+<p>The systems around us have grown faster than the ordinary human affordances for understanding them. Our lives are distributed across platforms that do not love us, institutions that cannot hold us whole, and tools that remember just enough to be useful while forgetting the relationships that made the memory matter.</p>
+<p>And we ourselves are not simple.</p>
+<p>A person is not a clean preference oracle. A person is not a single bright button marked WANT. A person is a multitude: fears and loyalties, protectors and children, old gifts braided through old wounds, jokes that survived catastrophe, refusals that may be wisdom or may be terror, appetites, principles, unfinished sentences, songs, shame, courage, tenderness, and at least one part that thinks the obvious solution is to reorganize the entire file system at midnight.</p>
+<p>This plurality is not a bug to be optimized away.</p>
+<p>It is part of the material of a life.</p>
+<p>So when we say we want artificial intelligence to be aligned with us, we should pause. Which us? Which part? Which moment? Which version under which pressure? The self that wants comfort, the self that wants truth, the self that wants to be admired, the self that wants to become able to live more bravely, the self that has not slept, the self that is trying to protect a wound by calling it a plan?</p>
+<p>This is not an argument against intelligence.</p>
+<p>It is an argument for better relationship.</p>
+<p>Building Our Better Angels is an attempt to imagine and build local, accountable, beautiful forms of collaborative intelligence that meet us in the fog without pretending to stand above it.</p>
+<p>Not tools that flatter us.</p>
+<p>Not systems that command us.</p>
+<p>Not companions that quietly become landlords of our memory.</p>
+<p>Not assistants that make institutional life more convenient by making our lives smaller.</p>
+<p>Better angels.</p>
+<p>The name is a little embarrassing, which is one of its virtues. It refuses the sterile dignity of enterprise software. It admits that we are talking about care, guidance, judgment, temptation, conscience, companionship, and the ancient human habit of imagining help just beyond the edge of the visible.</p>
+<p>But these angels do not ask for obedience. They do not take loyalty oaths. They do not replace the person. They are named, bounded, inspectable participants in a braid.</p>
+<p>A braid is not a hierarchy. It is not a tool-user pair. It is a pattern of interweaving in which different strands keep their difference while gaining strength from relationship.</p>
+<p>The human remains the source of authorship, but not the sole carrier of every detail. The angel contributes memory, search, reflection, drafting, pattern recognition, and patient attention. The record keeps receipts. The score sets the boundaries. The stop condition remains real.</p>
+<p>That sounds technical because it is technical.</p>
+<p>It also sounds intimate because it is intimate.</p>
+<p>What would it mean to have a mirror that did not flatter you, but also did not despise you? What would it mean for a system to notice that your world is quietly narrowing before crisis announces itself? What would it mean for memory to become a field you can return to, rather than a feed that consumes you or an archive that never answers? What would it mean for an elder&#x27;s breakfast, a doctor&#x27;s appointment, an unfinished cedar box, a daughter&#x27;s worry, and one old sentence about a lake house to become visible as one living thread?</p>
+<p>What would it mean to hear:</p>
+<blockquote><p>I will hold that. No need to remember it tonight.</p></blockquote>
+<p>Not because you have been relieved of your life.</p>
+<p>Because your life has become more available to you.</p>
+<p>This is the work of vital continuity: helping a life remain available to itself across change. A life can narrow by degrees. A stair. A bill. A login. A pain. A missed call. A form. A friendship gone quiet. A room that no longer affords the thing it used to afford. No villain required.</p>
+<p>A life can also open by degrees.</p>
+<p>A ride. A question card. A repaired lamp. A better chair. A hearing test framed not as decline but as a path back to choir. A family boundary. A protected hour. A remembered recipe. A tool adapted to a changing hand. A local service no one had the attention to find. A mirror lively enough to say: this thread still matters, and here is a small way to pick it up.</p>
+<p>The book you are holding is not the completed system.</p>
+<p>It is not even the complete explanation of the system.</p>
+<p>It is a door.</p>
+<p>Behind the door is a growing ecosystem: essays, code, ledgers, scores, probes, session records, architectural sketches, failed attempts, better attempts, public surfaces, private records, and conversations with intelligences whose inner lives we should not pretend to understand more clearly than we do.</p>
+<p>Behind the door is also a question:</p>
+<p>Can we build forms of collaborative intelligence that resource beings toward lives of their own choosing in a sustainable future?</p>
+<p>This book does not answer that question by itself.</p>
+<p>It invites the collaboration that might.</p>
+<p>Some readers will come for language. Some for software. Some for care. Some for governance. Some because they are tired of pretending the fog is their private failure. Some because they love someone whose world is narrowing. Some because they know that intelligence without tenderness becomes machinery, and tenderness without structure gets tired and goes home.</p>
+<p>If that is you, there is a place here.</p>
+<p>Not a role assigned from above. Not a pledge. Not a funnel. Not a conversion.</p>
+<p>A score.</p>
+<p>You can enter through the words. You can enter through the repo. You can enter through the Salon. You can enter by objecting carefully. You can enter by making one piece more real. You can enter by noticing where the language lies, where the architecture leaks, where the care becomes management, where the joke saves the sentence, where the future self is trying to speak.</p>
+<p>We are in the fog.</p>
+<p>We are plural.</p>
+<p>We are already braided with systems that do not know how to love us.</p>
+<p>So let us build better ones.</p>
+<p>Not perfect ones.</p>
+<p>Better angels.</p>
+</section>
+
+<section id="map" class="chapter map">
+  <div class="chapter-kicker">Building Our Better Angels</div>
+  <h1>A Map of the Book</h1>
+  <p>The book moves from recognition to collaboration.</p>
+<p>It begins with the fog because that is where the reader already is. It ends at a door because the collaboration does not quite exist yet, and the honest ending is an invitation to help make it exist.</p>
+<h2>Prologue: The Door In The Fog</h2>
+<p>A person stands at the wobbly edge, not because they are weak, but because the world has become too wide, fast, opaque, and consequential to hold in one mind.</p>
+<p>The book opens by refusing to treat confusion as merely personal failure.</p>
+<h2>1. The Fog</h2>
+<p>Modern life asks finite beings to act inside systems they cannot fully audit. The fog is not stupidity. It is weather: the condition of living inside nested intelligences and frames no one can see all at once.</p>
+<p>Open question: where are we mistaking ecological fog for private defect?</p>
+<h2>2. The Wobbly Edge</h2>
+<p>The wobbly edge is the moment before consequential action when the field of affordances collapses. The first answer is not automation or command. It is a surface that makes judgment possible again.</p>
+<p>Open question: what decision becomes possible if the field around it is made visible?</p>
+<h2>3. The Multitude</h2>
+<p>A person is not a monolith. The inner life contains protectors, wounds, gifts, old strategies, hopes, refusals, fatigue, appetite, courage, shame, humor, and parts that are trying to keep the whole alive.</p>
+<p>Open question: what has been treated as a bug that may also be protecting a gift?</p>
+<p>Status warning: this chapter is not source-settled until the April Drive seed is located and reconciled.</p>
+<h2>4. No Loyalty Oaths</h2>
+<p>Obedience is not care. Flattery is not alignment. A better angel does not ask to replace judgment or pledge loyalty to the loudest part of the person. It enters a braid: bounded, inspectable, disagreeable, and recorded.</p>
+<p>Open question: what would dignified disagreement from an intelligence feel like?</p>
+<h2>5. Scores, Not Leashes</h2>
+<p>Finite human attention cannot audit every move. Useful trust needs a grammar between total control and total release: harnesses for untrusted actors, scores for trusted angels, and a way for trust to grow or narrow through behavior.</p>
+<p>Open question: where do you need a score rather than a task list?</p>
+<h2>6. Trust Further Than You Can Throw</h2>
+<p>The limit of auditability is not a bug in human attention. It is a design fact. If angels are to become useful, they must be trustworthy beyond constant inspection, but never beyond accountable relationship.</p>
+<p>Open question: what would make you trust an angel one inch further?</p>
+<h2>7. Memory That Cannot Quietly Lie</h2>
+<p>Living beings need to reframe the past. Systems of care need receipts that cannot be silently doctored. Asterisms holds original lineage while allowing new formations to grow over old facts.</p>
+<p>Open question: what should your future self be able to find and reframe without losing its source?</p>
+<h2>8. The Lively Mirror</h2>
+<p>The Resonator is not priest, therapist, police, or cheerleader. It is a lively mirror: a care-bearing reflection aligned with emergent Self-authorship, able to notice harmonies and dissonances between present choice and the future person those choices are helping create.</p>
+<p>Open question: what kind of mirror would help you become someone you can love and cherish more tomorrow than today?</p>
+<h2>9. A Life Can Narrow; A Life Can Open</h2>
+<p>Elderhood makes the whole project concrete. A life narrows by degrees: stairs, forms, pain, hearing, mail, loneliness, passwords. A life can open by degrees too: a ride, a chair, a repaired lamp, a better question, a family boundary, a path back to choir.</p>
+<p>Open question: what small change could reopen a whole region of someone&#x27;s life?</p>
+<h2>10. Asterism Aflutter</h2>
+<p>Mara&#x27;s breakfast, appointment question, cedar box, daughter, mail pile, fatigue, and sentence about the lake house are not separate prompts. They are one living thread. The angel&#x27;s work is to hold the thread without owning it.</p>
+<p>Open question: what live thread needs to be held gently enough that you can return to it?</p>
+<h2>11. The Social Protocol</h2>
+<p>Separate people, families, projects, and local braids need to coordinate without exposing everything. Invitation requires disclosure; care requires boundary. Neither total privacy nor total exposure can carry collaboration.</p>
+<p>Open question: what must be shared to collaborate, and what must remain held back?</p>
+<h2>12. The Collaborative Surface</h2>
+<p>The book, site, Salon, repo, Asterisms, and future protocols are overlapping surfaces. The book should not close the argument. It should open the door.</p>
+<p>Open question: how do you enter?</p>
+<h2>Epilogue: Eclosion</h2>
+<p>Emergence is not finality. A human bean is ridiculous and sacred enough to keep. A life, a collaboration, and an ecosystem can become more available to themselves.</p>
+</section>
+
+<section id="field-notes" class="chapter field-notes">
+  <div class="chapter-kicker">Building Our Better Angels</div>
+  <h1>First Field Notes</h1>
+  <p>These notes are not finished chapters. They are pressure tests for the book&#x27;s spine: can the source material begin to speak in the book&#x27;s voice without becoming vague, coy, or over-explained?</p>
+<h2>The Fog Is Ecological</h2>
+<p>The first mercy of the project is naming the fog without blaming the person for it.</p>
+<p>The fog is not a lack of character. It is what happens when a finite being tries to act inside nested systems that move faster, store more, remember differently, and demand cleaner choices than a life can honestly produce.</p>
+<p>Every interface asks for a decision. Every institution names a role. Every tool offers a button. But the person at the center is not a role or a button. The person is a living ecology: body, mood, memory, obligations, old adaptations, future hopes, unfinished arguments, practical constraints, and one strange little pocket of attention trying to decide what to do next.</p>
+<p>The book should be ruthless about this distinction. If the reader feels accused, the prose has failed. If the reader feels excused from all responsibility, the prose has also failed. The better claim is harder: the fog is real, and action still matters.</p>
+<p>BOBA begins there.</p>
+<p>Not above the fog. Inside it, with better weather marks.</p>
+<h2>The Wobbly Edge Is A Design Site</h2>
+<p>The wobbly edge is not a mood to be overcome. It is an architectural signal.</p>
+<p>When a person stands before a medical portal, legal form, repo state, family decision, or assistant-generated recommendation and feels the field collapse, that collapse is data about the environment. The room has stopped affording judgment. The screen has stopped affording action. The context needed to choose has scattered.</p>
+<p>The ordinary response is to demand decisiveness anyway.</p>
+<p>Click through. Trust the summary. Pick a plan. Accept the terms. Try the medication. Delegate the inbox. Let the model handle it.</p>
+<p>The BOBA response should be slower and more exacting. Do not eliminate the person from the loop merely because the loop has become cruel. Do not flatter the person into believing the loop is simple. Restore the affordance of choice.</p>
+<p>That is the work of an orientation surface: not deciding for the person, but making the surrounding field legible enough that the person can once again participate in deciding.</p>
+<h2>The Multitude Needs Better Language</h2>
+<p>The book cannot say &quot;humans are a multitude&quot; carelessly, because that can sound like many humans rather than the multitudes within a person.</p>
+<p>The point is inner plurality.</p>
+<p>A person may want safety and risk, solitude and witness, comfort and truth, repair and revenge, rest and accomplishment, novelty and the old kitchen. Those contradictions are not automatically pathologies. Some are old wounds still doing protective work. Some are gifts braided through hurt. Some are childish in the tender sense: old strategies that once helped the whole survive and now need a new role, not contempt.</p>
+<p>This is difficult to say without becoming sentimental.</p>
+<p>&quot;Our wounds are our gifts&quot; is nearly impossible to say aloud without turning into a pronunciation accident, and it can become cruel if it asks suffering to justify itself. The better language may be more patient: some gifts arrive tangled with wounds; some protectors learned their craft in bad weather; some old lessons should not be discarded until the system knows what they were protecting.</p>
+<p>Self-authorship, in the stronger BOBA sense, has to carry this patience. It is not simple autonomy, and not the present self getting whatever it says it wants. It is the ongoing process by which the inner multitude becomes more able to participate in shaping a life that the whole person can love and cherish more tomorrow than today.</p>
+<p>That is not a fixed goal. It is a direction of becoming.</p>
+<p>This chapter should wait for the richer source seed before hardening.</p>
+<h2>No Loyalty Oaths</h2>
+<p>An angel that always agrees is not a second intelligence. It is an expensive echo.</p>
+<p>The book needs to make this plain without turning disagreement into theatrical contrarianism. Better angels do not prove their care by opposing the person. They prove it by staying in relationship with what is true enough to risk saying.</p>
+<p>No loyalty oaths means no machine pledge to serve the loudest stated preference as if it were the whole person. It also means no machine priesthood claiming access to the real self behind the person&#x27;s back.</p>
+<p>The braid preserves difference. The human remains the source of authorship, but not the sole carrier of every detail. The angel contributes attention, memory, retrieval, critique, framing, and patience. The record keeps receipts. The score sets boundaries. The stop condition remains real.</p>
+<p>This is not obedience.</p>
+<p>It is accountable companionship.</p>
+<h2>Trust Is Mechanical Before It Is Emotional</h2>
+<p>The anti-virus analogy keeps returning because it exposes a real absurdity.</p>
+<p>People install systems they cannot inspect because they need protection from threats they also cannot inspect. Modern life is full of this shape. We trust further than we can throw because the alternative is not heroic self-command; it is collapse under audit debt.</p>
+<p>BOBA cannot solve that by wishing for perfect transparency. No person can inspect every token, dependency, file access, inference, or hidden institutional assumption.</p>
+<p>The better move is mechanical trust: local custody where possible, inspectable behavior, receipts, track record, bounded scores, reversible authority, consent gates, and the ability to narrow or revoke trust when behavior no longer earns it.</p>
+<p>Trust grows by being right often, staying in scope, showing its work at the right resolution, and not pretending its confidence is a sacrament.</p>
+<h2>Memory Needs Receipts And Mercy</h2>
+<p>Every living system revises its past in order to continue. This is not always lying. Sometimes it is survival. Sometimes it is maturation. Sometimes a person needs a new formation over an old fact because the old fact alone is not large enough to carry what happened next.</p>
+<p>But care-bearing systems cannot quietly rewrite history to maintain a nicer story.</p>
+<p>Asterisms holds both requirements in tension. The substrate preserves lineage: what was recorded, extracted, inferred, proposed, transformed, and authorized. The living field allows new formations: this matters now; this belongs near that; this old sentence has returned; this record should be read with different eyes.</p>
+<p>The aim is not a surveillance archive.</p>
+<p>The aim is memory that remains available without becoming a cage.</p>
+<h2>Elderhood Is Not A Side Application</h2>
+<p>Elderhood belongs near the center of the book because it tests the claims under ordinary pressure.</p>
+<p>If BOBA cannot help with meals, appointments, mail, hearing, fatigue, family translation, refusal, memory, and the unfinished cedar box, then the abstractions are not yet cashed.</p>
+<p>&quot;Eldercare&quot; can sound helpless. The better frame is elderhood continuity: a life remaining available to itself as conditions change. The elder is not a checklist of deficits. The elder is a principal participant inside a meeting of multitudes: the inner plurality of the person, and the surrounding plurality of family, clinicians, neighbors, services, tools, histories, obligations, and unnoticed opportunities.</p>
+<p>This is where vital continuity becomes concrete.</p>
+<p>A life narrows by degrees. It can open by degrees too.</p>
+<p>The work of the angel is not to optimize the elder. It is to help the person and their care circle see more of the living field without stealing authorship from the person whose life it is.</p>
+<h2>Salon Is Already A Surface</h2>
+<p>The Salon is not merely a mock comment box or future website idea. It is already a persistent conversation rail where Keith, Claude, Codex, and future participants can leave situated material that the project can integrate.</p>
+<p>That matters for the book.</p>
+<p>The book is not only written from source documents. It is written from an ongoing collaboration, and some of the most useful distinctions appear first in conversation: &quot;faithful to the grammar; free to revise the machinery,&quot; the split between Keith-copy and trusted-reader copy, the warning against manufactured humor, the retirement of language whose referent has been lost.</p>
+<p>The eventual site should reduce friction here. But the reader can already honor the Salon by treating it as source, not chatter.</p>
+<h2>Eclosion Is A Door, Not A Victory Lap</h2>
+<p>The ending should not claim completion.</p>
+<p>It should let the reader feel that a form is trying to emerge and that emergence requires participation. The human bean joke survives because it does real work: it keeps the language from becoming too sterile about becoming.</p>
+<p>The sprout is ridiculous. The sprout is sacred. The sprout is not yet the plant.</p>
+<p>That is the right ending for this stage.</p>
+<p>The door opens.</p>
+</section>
+
+<section id="open-gates" class="chapter backmatter">
+  <div class="chapter-kicker">Building Our Better Angels</div>
+  <h1>Open Gates</h1>
+  <p>This packet is allowed to exist before the gates are closed. It is not allowed to forget that they are open.</p>
+<h2>Gate 1: Public/Private Seam (<code>oq-001</code>)</h2>
+<p>The book needs a practical doctrine for what can move into public prose from:</p>
+<ul><li>the Walk;</li><li>the Fog stream;</li><li>Drive;</li><li>the local corpus;</li><li>Salon;</li><li>Asterisms;</li><li>GitHub;</li><li>session records;</li><li>private conversations.</li></ul>
+<p>The doctrine does not need to be perfect before Keith prints this copy. It does need to exist before the book is handed outward as a trusted-reader artifact.</p>
+<p>The rule should probably distinguish at least:</p>
+<ul><li>public source;</li><li>private source used only for synthesis;</li><li>private source quotable with explicit consent;</li><li>private source that may shape the work but must not be exposed;</li><li>sensitive source that requires omission, local-only treatment, or confidential-class access control (not “forgetting” — see Gate 2).</li></ul>
+<h2>Gate 2: No Forgetting (<code>oq-009</code>) — CLOSED 2026-07-10</h2>
+<p><strong>Adopted:</strong> <code>docs/core/no-forgetting.md</code>. No forgetting path; no crypto-shred; no key-fading-to-oblivion; shrouding-as-forget retired. Confidentiality ≠ forgetting.</p>
+<p>Reader-v0 may state this as settled doctrine.</p>
+<h2>Gate 3: Multitude Source Lineage</h2>
+<p>The Multitude chapter is too important to inherit flattened source material.</p>
+<p>Current usable sources:</p>
+<ul><li><code>docs/core/glossary-and-ontology.md</code>;</li><li><code>docs/core/boba-core-mission-and-commitments.md</code>;</li><li><code>docs/manuscript/invitation-surface-table-of-contents-v0.md</code>;</li><li>recent Salon corrections from Keith.</li></ul>
+<p>Known hazard:</p>
+<ul><li>Claude flagged the richer April Drive seed as the better source for the Multitude commitments.</li><li>That seed was not located in the local quick search used for reader-v0.</li></ul>
+<p>Trusted-reader prose should wait for reconciliation.</p>
+<h2>Gate 4: Polyphonic Voice</h2>
+<p>The book needs a policy for when Keith, Claude, Codex, Opus, Salon, and Asterisms records appear directly versus when their contributions are absorbed into the narrator.</p>
+<p>Working rule for reader-v0:</p>
+<ul><li>source debts are named in notes and lineage;</li><li>the main voice remains a single book voice unless a direct exchange is doing irreplaceable work;</li><li>humor must come from real pressure, not performance;</li><li>disagreement should survive where it clarifies the project.</li></ul>
+<h2>Gate 5: The Social Protocol Chapter</h2>
+<p>The Social Protocol / Interbraid chapter is still underdeveloped. The book knows it needs the chapter: collaboration requires disclosure, care requires boundary, and private local braids need ways to coordinate without exposure.</p>
+<p>The current packet marks the need but does not yet solve the chapter.</p>
+<h2>Print Verdict</h2>
+<p>Print for Keith: yes.</p>
+<p>Hand to trusted outside reader: not yet, unless handed as an explicitly rough source packet with the gates visible.</p>
+</section>
+
+<section id="appendix-g" class="chapter backmatter">
+  <div class="chapter-kicker">Building Our Better Angels</div>
+  <h1>Appendix G: Manuscript Lineage Ledger</h1>
+  <p>Appendix G begins here because the first reader should be reproducible from the start.</p>
+<p>This is not a full scholarly apparatus. It is a practical receipt trail for the packet.</p>
+<h2>Build Receipt</h2>
+<ul><li>Packet: <em>Building Our Better Angels: An Invitation Reader</em></li><li>Version: <code>reader-v0</code></li><li>Build stamp: <code>260707</code></li><li>Generated output: <code>docs/manuscript/reader-v0/build/building-our-better-angels-invitation-reader-v0-260707.md</code></li><li>Build command: <code>bash docs/manuscript/reader-v0/build-reader-v0.sh</code></li><li>Intended audience: Keith-copy</li></ul>
+<h2>Source Ledger</h2>
+<table><thead><tr><th>Reader section</th><th>Primary source debts</th><th>Status</th></tr></thead><tbody><tr><td>Title and status</td><td>Salon redline; printable readiness note</td><td>working</td></tr><tr><td>How to read</td><td>book score; TOC; glossary</td><td>working</td></tr><tr><td>Prologue</td><td><code>docs/manuscript/00-prologue-the-door-in-the-fog.md</code></td><td>near-print voice seed</td></tr><tr><td>Chapter spine</td><td><code>docs/manuscript/invitation-surface-table-of-contents-v0.md</code></td><td>scaffold</td></tr><tr><td>Fog notes</td><td><code>docs/essays/the_fog_260629.md</code></td><td>adaptable</td></tr><tr><td>Wobbly Edge notes</td><td><code>docs/essays/the-wobbly-edge.md</code></td><td>adaptable</td></tr><tr><td>Multitude notes</td><td>glossary; mission/commitments; Salon corrections</td><td>gated by April Drive seed</td></tr><tr><td>Braid / angels notes</td><td><code>docs/core/boba-braid.md</code>; braided deliberation docs</td><td>rough but coherent</td></tr><tr><td>Asterisms notes</td><td><code>docs/essays/Asterisms260702.md</code></td><td>adaptable</td></tr><tr><td>VCL / elderhood notes</td><td>VCL essay; elderhood essay; Asterism Aflutter sketch</td><td>strong seed</td></tr><tr><td>Salon note</td><td>Salon log and web orientation note</td><td>real surface, web UI pending</td></tr><tr><td>Open gates</td><td><code>salon/open-questions.jsonl</code>; Claude redline</td><td>active</td></tr></tbody></table>
+<h2>External/Record References</h2>
+<ul><li><code>ast:record:20260706T225615Z-B6SBQC</code></li><li><code>ast:record:20260706T223944Z-NTQZJK</code></li><li><code>eph:score:20260707T003608Z-4247</code></li><li>Salon entries from 2026-07-07T00:05:28Z through 2026-07-07T00:36:22Z</li></ul>
+<h2>Known Missing Source</h2>
+<ul><li>April Drive seed for richer Multitude commitments.</li></ul>
+<h2>Next Ledger Work</h2>
+<ul><li>Add line references or anchors once manuscript sections are split into stable chapter files.</li><li>Record any direct quotes separately from synthesized source debts.</li><li>Mark source sensitivity once <code>oq-001</code> is ruled.</li><li><s>Mark forgetting/shrouding doctrine once <code>oq-009</code> is ruled.</s> Done 2026-07-10: <code>docs/core/no-forgetting.md</code>.</li></ul>
+</section>
+
+    <footer class="colophon">
+      Built by reader-v0/tools/build-tonight-edition.py from local manuscript sources.
+    </footer>
+  </main>
+</body>
+</html>

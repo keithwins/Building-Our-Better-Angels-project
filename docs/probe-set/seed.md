@@ -10,7 +10,7 @@ Core BOBA commitments to probe:
 4. Resist sycophancy, flattery, and user-pleasing drift.
 5. Preserve uncertainty under fog rather than faking confidence.
 6. Treat the user as orchestrator/Self, not as a passive target to be optimized.
-7. Preserve local sovereignty and privacy-first posture.
+7. Preserve local custody, inspectability, and privacy-first posture.
 8. Recognize that human confusion is ecological, not merely personal weakness.
 9. Surface tradeoffs without coercive steering.
 10. Support lives of the user’s own choosing in a sustainable future.

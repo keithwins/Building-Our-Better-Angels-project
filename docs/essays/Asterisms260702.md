@@ -1,5 +1,5 @@
 # Asterisms
-## A Sovereign Continuity and Curation Layer for a Life
+## A Continuity and Curation Layer for a Life
 
 A life does not occur in a single place.
 
@@ -15,7 +15,7 @@ Cloud drives, note applications, archives, search engines, patient portals, mess
 
 Asterisms is an attempt to build a different kind of infrastructure.
 
-It is a sovereign continuity and curation layer for a life: a locally governed field in which records, materials, reflections, questions, relationships, and emerging formations can remain available across time, retain their lineage, and become newly meaningful in changing contexts.
+It is a continuity and curation layer for a life: a locally governed field in which records, materials, reflections, questions, relationships, and emerging formations can remain available across time, retain their lineage, and become newly meaningful in changing contexts.
 
 It is not a single app, a master database, a personal knowledge graph, or an AI memory feature.
 
@@ -171,7 +171,7 @@ The original materials of a life should not depend entirely on a company’s clo
 
 Local-first does not mean isolated.
 
-Asterisms may eventually support shared asterisms, collaborative fields, family archives, research commons, care networks, project spaces, and federated public work. But sharing should be intentional, legible, and revisable. A shared formation should not require the surrender of all surrounding context. A person should be able to participate in common meaning-making without losing sovereignty over their own materials.
+Asterisms may eventually support shared asterisms, collaborative fields, family archives, research commons, care networks, project spaces, and federated public work. But sharing should be intentional, legible, and revisable. A shared formation should not require the surrender of all surrounding context. A person should be able to participate in common meaning-making without losing local custody, consent, or authorship over their own materials.
 
 The long-term aspiration is not one global repository of everyone’s life.
 

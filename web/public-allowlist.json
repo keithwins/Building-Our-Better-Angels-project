@@ -1,0 +1,34 @@
+{
+  "version": "260710",
+  "purpose": "Docs the orientation web may show as the public/invitation spine. Not the whole vault. Operator/mechanism docs stay out of nav.",
+  "documents": [
+    {"id": "fog", "file": "the_fog_260629.md", "dir": "essays", "nav": "Invitation", "label": "The Fog"},
+    {"id": "wobbly", "file": "the-wobbly-edge.md", "dir": "essays", "nav": "Invitation", "label": "The Wobbly Edge"},
+    {"id": "mission", "file": "boba-core-mission-and-commitments.md", "dir": "core", "nav": "Invitation", "label": "Mission & Commitments"},
+    {"id": "scores", "file": "on-scores-and-harnesses.md", "dir": "essays", "nav": "Invitation", "label": "Scores & Harnesses"},
+    {"id": "braid", "file": "boba-braid.md", "dir": "core", "nav": "Invitation", "label": "The Braid"},
+    {"id": "continuity", "file": "continuity-and-decision-lineage.md", "dir": "core", "nav": "Core", "label": "Continuity & Decision Lineage"},
+    {"id": "glossary", "file": "glossary-and-ontology.md", "dir": "core", "nav": "Core", "label": "Glossary & Ontology"},
+    {"id": "resonator", "file": "resonator-charter.md", "dir": "core", "nav": "Core", "label": "Resonator Charter"},
+    {"id": "ephemeris-charter", "file": "ephemeris-charter.md", "dir": "core", "nav": "Core", "label": "Ephemeris Charter"},
+    {"id": "social-protocol", "file": "social-protocol-of-angelic-outreach-v0.md", "dir": "core", "nav": "Core", "label": "Social Protocol"},
+    {"id": "no-forgetting", "file": "no-forgetting.md", "dir": "core", "nav": "Core", "label": "No Forgetting (oq-009)"},
+    {"id": "how-we-work", "file": "how-we-work-here.md", "dir": "method", "nav": "Core", "label": "How We Work Here"},
+    {"id": "vcl", "file": "Vital Continuity Layer 260629.md", "dir": "essays", "nav": "Lives", "label": "Vital Continuity Layer"},
+    {"id": "little-flea", "file": "Little-Flea-Foundational-v2-260703.md", "dir": "essays", "nav": "Lives", "label": "Little Flea"},
+    {"id": "asterisms-essay", "file": "Asterisms260702.md", "dir": "essays", "nav": "Lives", "label": "Asterisms (essay)"},
+    {"id": "elderhood", "file": "elderhood-and-the-hidden-milieu.md", "dir": "essays", "nav": "Lives", "label": "Elderhood & Hidden Milieu"},
+    {"id": "book-plan", "file": "book-publishing-plan.md", "dir": "core", "nav": "Book", "label": "Publishing Plan"},
+    {"id": "book-score", "file": "book-as-collaborative-surface-score.md", "dir": "manuscript", "nav": "Book", "label": "Book as Collaborative Surface"},
+    {"id": "prologue", "file": "00-prologue-the-door-in-the-fog.md", "dir": "manuscript", "nav": "Book", "label": "Prologue"},
+    {"id": "membrane", "file": "selective-collaboration-membrane-v0.md", "dir": "architecture", "nav": "How to enter", "label": "Collaboration Membrane"},
+    {"id": "thin-cut", "file": "collaboration-surface-thin-cut-260710.md", "dir": "architecture", "nav": "How to enter", "label": "Thin collaboration cut"},
+    {"id": "escalation", "file": "membrane-escalation-checklist-v0.md", "dir": "method", "nav": "How to enter", "label": "Escalation checklist (Keith)"}
+  ],
+  "excluded_from_nav_on_purpose": [
+    "asterisms-system/docs/* (mechanism — not invitation)",
+    "session-records/* (receipts — not public spine)",
+    "porter / registry contracts",
+    "RSAO / Architecture Refined (wrong-home or superseded for invitation)"
+  ]
+}

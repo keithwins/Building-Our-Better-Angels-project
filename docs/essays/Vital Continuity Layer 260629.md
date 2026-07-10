@@ -1,5 +1,5 @@
 # Vital Continuity Layer
-## Sovereign Personal Infrastructure for an Ecology of Affordances
+## Personal Continuity Infrastructure for an Ecology of Affordances
 *Second corpus draft*
 
 ## Working proposition
@@ -135,9 +135,9 @@ The VCL sees health as one strand in the larger work of helping a person remain 
 
 ---
 
-## 5. Sovereign personal infrastructure
+## 5. Personal continuity infrastructure
 
-The VCL should be understood as a form of **sovereign personal infrastructure**.
+The VCL should be understood as a form of **personal continuity infrastructure**.
 
 Its center of gravity should remain with the person, not with employers, insurers, hospital systems, advertisers, platforms, or bureaucracies whose interests may diverge from that person’s own.
 

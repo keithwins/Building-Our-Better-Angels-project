@@ -39,7 +39,18 @@
   .salon-compose button.send { margin-left: auto; padding: 6px 16px; border-radius: 10px; cursor: pointer;
     border: 1px solid var(--accent-amber, #d9a441); background: transparent; color: var(--accent-amber, #d9a441);
     font: 600 12px var(--font-body, sans-serif); }
+  .salon-compose button.secondary { padding: 6px 12px; border-radius: 10px; cursor: pointer;
+    border: 1px solid var(--border-color, #444); background: transparent; color: var(--text-muted, #aaa);
+    font: 600 12px var(--font-body, sans-serif); }
   .salon-note { font-size: 11.5px; color: var(--text-muted, #999); min-height: 15px; }
+  .salon-section { border: 1px solid var(--border-color, #444); border-radius: 10px; padding: 10px 12px; margin-top: 10px; }
+  .salon-section h4 { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted, #999); margin-bottom: 8px; }
+  .salon-section ul { margin: 0; padding-left: 18px; }
+  .salon-section li { font-size: 12.5px; line-height: 1.45; margin-bottom: 4px; }
+  .salon-section .hint { color: var(--text-muted, #888); font-size: 11.5px; }
+  .salon-handoff-preview { white-space: pre-wrap; font: 11px/1.45 var(--font-mono, monospace); color: var(--text-secondary, #bbb);
+    background: var(--bg-primary, rgba(0,0,0,.25)); border: 1px solid var(--border-color, #444); border-radius: 10px;
+    padding: 10px 12px; max-height: 220px; overflow: auto; }
   .salon-q { border-left: 2px solid var(--border-color, #444); padding: 6px 10px; margin-bottom: 10px; }
   .salon-q.contextual { border-left-color: var(--accent-amber, #d9a441); }
   .salon-q .q-text { font-size: 13.5px; line-height: 1.45; }
@@ -79,6 +90,7 @@
   let scope = "page";          // floor filter: "page" | "all"
   let selectedTo = new Set();  // @names chosen in the picker
   let participants = null;
+  let lastSnapshot = null;
 
   async function fetchJsonl(url) {
     try {
@@ -121,6 +133,109 @@
     return !!doc && (e.refs || []).some((r) => r.includes(doc));
   }
 
+  function shortDocLabel(doc) {
+    return (doc || "").replace(/\.md$|\.html$/i, "").replace(/[-_]+/g, " ").trim() || "the floor";
+  }
+
+  function recentText(rows, limit = 5) {
+    return rows.slice(-limit).map((r) => `- ${r.author || "?"} · ${(r.kind || "note")}: ${String(r.text || "").replace(/\s+/g, " ").trim()}`);
+  }
+
+  function openQuestionsForDoc(qRows, doc) {
+    const latest = latestPerId(qRows || []).filter((q) => q.status === "open" || q.status === "claimed");
+    const contextual = doc ? latest.filter((q) => refersToPage(q, doc)) : [];
+    const general = latest.filter((q) => !doc || !refersToPage(q, doc));
+    return { contextual, general, latest };
+  }
+
+  function nextStepsFromQuestions(qGroups) {
+    const steps = [];
+    for (const q of qGroups.contextual.slice(0, 4)) {
+      steps.push(`Resolve ${q.id}${q.claimed_by ? ` (claimed by ${q.claimed_by})` : ""}`);
+    }
+    for (const q of qGroups.general.slice(0, 2)) {
+      steps.push(`Decide whether ${q.id} needs cross-document attention`);
+    }
+    if (!steps.length) steps.push("No open questions surfaced on this page.");
+    return steps;
+  }
+
+  function buildHandoffMarkdown({ doc, qGroups, rows, agents }) {
+    const stamp = new Date().toISOString().replace(/\.\d{3}Z$/, "Z");
+    const docLabel = shortDocLabel(doc);
+    const title = `Salon Handoff — ${docLabel}`;
+    const context = doc ? `Current document: ${doc}` : "Current document: whole floor";
+    const scopeLine = scope === "page" ? "Conversation scope: this page" : "Conversation scope: whole floor";
+    const agentLine = agents?.length ? `Participants observed: ${agents.map((p) => p.name).join(", ")}` : "Participants observed: none";
+    const openQuestionLines = [
+      ...qGroups.contextual.map((q) => `- ${q.id}: ${q.question}`),
+      ...qGroups.general.slice(0, 4).map((q) => `- ${q.id}: ${q.question}`),
+    ];
+    const conversationLines = recentText(rows, 8);
+    const nextSteps = nextStepsFromQuestions(qGroups);
+
+    return `---
+title: ${title}
+status: draft
+date: ${stamp}
+source_doc: ${doc || "floor"}
+---
+
+# ${title}
+
+## Context
+
+- ${context}
+- ${scopeLine}
+- ${agentLine}
+
+## What happened
+
+${conversationLines.length ? conversationLines.join("\n") : "- No salon entries captured for this surface."}
+
+## Open questions
+
+${openQuestionLines.length ? openQuestionLines.join("\n") : "- None surfaced."}
+
+## Next steps
+
+${nextSteps.map((step) => `- ${step}`).join("\n")}
+
+## Handoff notes
+
+- Capture date: ${stamp}
+- This draft is intended for the next intelligence entering the work.
+- Promote anything durable into Asterisms after review.
+`;
+  }
+
+  async function saveHandoff() {
+    const doc = activeDoc();
+    const note = panel.querySelector("#salon-note");
+    if (!lastSnapshot) {
+      note.textContent = "waiting for salon state...";
+      return;
+    }
+    const markdown = buildHandoffMarkdown({ doc, ...lastSnapshot });
+    note.textContent = "writing handoff…";
+    try {
+      const r = await fetch("/salon/api/session-record", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          title: `salon-handoff-${shortDocLabel(doc)}`.slice(0, 80),
+          markdown,
+        }),
+      });
+      if (!r.ok) throw new Error(String(r.status));
+      const data = await r.json();
+      note.textContent = `handoff saved ✓ ${data.path || ""}`;
+      render();
+    } catch {
+      note.textContent = "could not write session record; salon-serve needs to be running.";
+    }
+  }
+
   function composerHtml(doc, agents) {
     const picker = agents
       .filter((p) => p.kind === "agent")
@@ -138,7 +253,7 @@
     <div class="salon-compose">
       <textarea id="salon-text" placeholder="One line for the floor. Addressed agents answer; the rest reply only if it matters."></textarea>
       <div class="row">${picker}</div>
-      <div class="row">${chips.join(" ")}<button class="send" id="salon-send">Send</button></div>
+      <div class="row">${chips.join(" ")}<button class="secondary" id="salon-capture">Capture handoff</button><button class="send" id="salon-send">Send</button></div>
       <div class="salon-note" id="salon-note"></div>
     </div>`;
   }
@@ -179,6 +294,9 @@
     const [qRows, logRows, agents] = await Promise.all([
       fetchJsonl(QUESTIONS_URL), fetchJsonl(LOG_URL), fetchParticipants(),
     ]);
+    const qGroups = openQuestionsForDoc(qRows || [], doc);
+    const floorRows = scope === "page" && doc ? (logRows || []).filter((e) => refersToPage(e, doc)) : (logRows || []);
+    lastSnapshot = { qGroups, rows: floorRows, agents: agents || [] };
 
     let html = `<div class="salon-title">comment-cycle · <b>${esc(docName || "the whole floor")}</b></div>`;
     html += composerHtml(doc, agents || []);
@@ -187,7 +305,7 @@
     if (!qRows) {
       html += '<div class="salon-empty">Could not reach /salon/open-questions.jsonl.</div>';
     } else {
-      const open = latestPerId(qRows).filter((q) => q.status === "open" || q.status === "claimed");
+      const open = qGroups.latest;
       open.sort((a, b) => (refersToPage(b, doc) ? 1 : 0) - (refersToPage(a, doc) ? 1 : 0) || (a.id < b.id ? -1 : 1));
       if (!open.length) html += '<div class="salon-empty">No open questions. Suspicious.</div>';
       for (const q of open) {
@@ -199,6 +317,15 @@
         </div>`;
       }
     }
+
+    html += "<h3>Next steps</h3>";
+    html += `<div class="salon-section"><ul>${nextStepsFromQuestions(qGroups).map((step) => `<li>${esc(step)}</li>`).join("")}</ul></div>`;
+
+    html += "<h3>Handoff draft</h3>";
+    html += `<div class="salon-section">
+      <div class="hint">This is the session-record draft that can be written to disk for the next intelligence.</div>
+      <div class="salon-handoff-preview" id="handoff-preview">${esc(buildHandoffMarkdown({ doc, qGroups, rows: floorRows, agents: agents || [] }))}</div>
+    </div>`;
 
     html += "<h3>Conversation</h3>";
     html += `<div class="salon-scope">
@@ -221,6 +348,8 @@
 
     // wire events
     panel.querySelector("#salon-send").addEventListener("click", send);
+    const captureBtn = panel.querySelector("#salon-capture");
+    if (captureBtn) captureBtn.addEventListener("click", saveHandoff);
     panel.querySelector("#salon-text").addEventListener("keydown", (ev) => {
       if (ev.key === "Enter" && (ev.metaKey || ev.ctrlKey)) send();
     });

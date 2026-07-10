@@ -54,7 +54,7 @@ Yet we cannot treat the map as a neutral window. The map is drawn by **another i
 
 To prevent the Orientation Surface from becoming a silent steering wheel, the map-making process itself must remain visible and revisable:
 *   **Expose the Scissors:** The system must not hide the logic of its compilation. You must be able to inspect *why* it chose to group these files or highlight this task.
-*   **The Map is Editable:** The human multitude can shake the map, disagree with the framing, and manually redraw the boundaries. The map is a collaborative draft, not an oracle.
+*   **The Map is Editable:** The person can shake the map, disagree with the framing, and manually redraw the boundaries. The map is a collaborative draft, not an oracle.
 *   **The Receipts are Immutable:** The Resonator cannot edit the history of the maps it has drawn. If it drifts into framing your reality to please you or steer you, that pattern is recorded permanently on the ledger, allowing you to look back and see the lens itself.
 
 It does not make the choice for you. It does not tell you what you *must* do. Instead, by organizing the chaos of the fog into a situated map of open options, it restores the primary affordance of *making a choice*. It transforms a space of paralyzing administrative debt back into a room that affords action.
@@ -68,4 +68,4 @@ To respect human-sized time and attention, the orientation surface does not pres
 *   **The Decision Surface:** A focused mapping of a single choice, clearly separating facts, interpretations, and active constraints. It restores the affordance of **judgment**, giving the multitude a clean mirror to evaluate its path.
 *   **The Conversational Walk (The Tour):** A spoken or podcast-like walkthrough designed to combat screen fatigue. It resources the somatic layers of vital continuity, allowing reflection to occur while walking, resting, or driving.
 
-At the wobbly edge, the orientation surface does not demand a leap. It shrinks the loop. It exposes the state, names the uncertainty, and makes recovery visible, ensuring that the wobbly tower of shoulders beneath our feet remains a stable foundation for the human multitude.
+At the wobbly edge, the orientation surface does not demand a leap. It shrinks the loop. It exposes the state, names the uncertainty, and makes recovery visible, ensuring that the wobbly tower of shoulders beneath our feet remains a stable foundation for the person standing there.

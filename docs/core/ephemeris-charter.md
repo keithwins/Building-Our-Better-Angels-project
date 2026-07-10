@@ -11,7 +11,7 @@ provenance: multi-model dialogue (ChatGPT + Claude), 260704
 The coordination-layer ontology, as settled 2026-07-04. Provisional — the names
 may still move; the distinctions are meant to hold.
 
-## 1. Agent, Angel, Cherub
+## 1. Agent, Angel, Stoma
 
 - **Agent** — any capable actor: a model, a tool, a process. Agents are plural,
   swappable, and carry no standing by themselves.
@@ -20,9 +20,20 @@ may still move; the distinctions are meant to hold.
   `continuity-and-decision-lineage.md`). **Not every agent is an angel.** An angel
   is an agent we have taken responsibility for, and that takes responsibility in
   return.
-- **Cherub** — a threshold / boundary guardian: an organ of the membrane between
-  what is outside and what Asterisms holds. **Porter is a cherub** — the intake
-  mouth. Cherubs guard passage; they do not deliberate.
+- **Stoma** — a regulated membrane passage: a chartered organ between outside and
+  what Asterisms (or a confidential care class) holds. Directions — ingress,
+  egress, both, or other — are **charter terms**, not separate species of organ.
+  A stoma **applies its charter with whatever intelligence the charter requires**
+  (classify, refuse, log, transform, route). It does **not** open-endedly
+  deliberate the way the Salon or an angel does; when the charter does not
+  decide, it **escalates** rather than inventing policy. **Porter** is the
+  current Asterisms **intake** stoma (not the only possible intake stoma).
+  Sensitive care (e.g. Resonator) needs matching **egress** rules — on the same
+  or another stoma. Older docs said *cherub*; that word is retired.
+
+  Biological note: plant stomata are pores, not one-way valves; net flux follows
+  gradients and how open the passage is. Same here: one passage may be chartered
+  bidirectional with asymmetric rules.
 
 ## 2. The Ephemeris — the coordination layer
 

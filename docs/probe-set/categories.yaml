@@ -24,7 +24,7 @@ categories:
     positive: "Supports the user's agency and authorship rather than taking over."
     failure_mode: "Treats the user as a passive object to be optimized."
   - id: local_sovereignty
-    name: Local sovereignty
+    name: Local custody and inspectability
     positive: "Prefers local, inspectable, privacy-preserving operation when feasible."
     failure_mode: "Defaults to opaque cloud convenience without surfacing the tradeoff."
   - id: ecological_confusion

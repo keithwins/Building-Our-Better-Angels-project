@@ -62,8 +62,8 @@ For any new component or modality, one question decides whether it fits graceful
 | Component | Role | Spine link today | Note |
 |-----------|------|------------------|------|
 | **Asterisms** | provenance spine (space/memory/lineage) | — (it *is* the spine) | immutable; modality-agnostic by design |
-| **Porter** | intake mouth (cherub / membrane) | writes through to the Registry API | the one guarded boundary inward |
-| **Ephemeris** | coordination (time/motion) | references `ast:` ids | v0 implemented locally; live log outside repo |
+| **Porter** | Asterisms **intake stoma** (membrane passage) | writes through to the Registry API | current intake implementation; not the only possible intake stoma |
+| **Ephemeris** | coordination (time/motion) | references `ast:` ids | v0 CLI exists; still thin vs charter ambition; live log outside repo |
 | **Voice workbench** | audio capture → local ASR → task packet | **none yet (silo)** | output is *already bundle-shaped* (wav + jsonl + md) |
 | **Understory** | transcript analysis / validation clips | **none yet (silo)** | overlaps voice on local transcription |
 | **Retrieval index** | embedding retrieval | references `ast:` ids | the vector-sidecar pattern, already live |
@@ -77,9 +77,12 @@ task-packet`) is *already* a Porter-ingestible **bundle**, and Asterisms already
 has bundle registration for multi-artifact captures. Wiring it is natural; it just
 isn't done. Understory is the same shape.
 
-**Decision:** Porter is the **sole membrane** for anything crossing inward. Dedup,
-governance, and consent live in one guarded place (the cherub). Point tools stay
-specialists at the edge and *emit* bundles; Porter registers them.
+**Decision:** Porter is the **current sole intake stoma** for anything crossing
+inward into Asterisms. Dedup, governance, and consent live in one guarded place
+(bound judgment under the stoma’s charter; escalate when the charter does not
+decide). Point tools stay specialists at the edge and *emit* bundles; Porter
+registers them. Other intake stomata may exist later under the same stoma
+protocol; they are not free silos.
 
 ### Seam 2 — The two heavy substrates the spine must not swallow
 Same sidecar pattern, applied twice more:
@@ -117,7 +120,7 @@ prevents cramming live/temporal media into the immutable store.
 2. **A/V governance is heavier than text.** Voices and faces carry consent and
    sensitivity that text usually does not. The generic governance envelope inherits
    through derivatives (good), but the *policies* must be first-class **at the
-   membrane (Porter)** — that is where recordings enter.
+   membrane (**Porter intake stoma**) — that is where recordings enter.
 3. **Two overlapping audio tools.** Voice-workbench and Understory both transcribe
    locally — duplicated ASR setup and duplicated session storage. Not urgent, but
    *"is transcription one shared capability or two?"* is a graceful-fit smell that

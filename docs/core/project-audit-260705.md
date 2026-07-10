@@ -89,9 +89,12 @@ The glossary says: *"We do not 'assign' scores; we **open** or **stage** a score
 The ephemeris charter says: *"This is the unit the Ephemeris **hands out**."*  
 "Hands out" implies top-down distribution; "opens/stages" implies creating conditions. These are different power dynamics. Should be reconciled.
 
-### Tension 2: Crypto-Shredding vs. Pure Immutability
+### Tension 2: Crypto-Shredding vs. Pure Immutability — RESOLVED 2026-07-10
 
-`oq-003` in the open questions registry still asks about per-material encryption keys. The book publishing plan previously referenced "shrouding (key-fading)" as a forgetting mechanism. This session purged crypto-shredding from the resonator charter — but the *concept* of making encrypted material progressively inaccessible is natural and important for a confidential mirror. The question of whether there is *any* forgetting path at all needs definitive resolution before the system handles real sensitive data.
+**Closed.** See [`no-forgetting.md`](no-forgetting.md). No forgetting path; no crypto-shred; no key-fading-to-oblivion; “shrouding” as forgetting is retired. Confidentiality ≠ forgetting. Older audit text below kept only as historical context of the tension.
+
+~~`oq-003` / book-plan shrouding-as-forget / Resonator gap — awaiting ruling.~~ → **`oq-009` adopted: No Forgetting.**
+
 
 ### Tension 3: Resonator as Mirror vs. Braid's Anti-Mirror Warning
 
@@ -146,4 +149,4 @@ The three-layer wake design (filesystem watcher → bash triage → headless CLI
 4. **Fix the regex crash** in app.js Resonator search — it will break for any user who types a parenthesis.
 5. **Consolidate the two Salon implementations** — wire the sidebar link to the real data-driven salon.js, retire the mock simulation in app.js.
 6. **Write a system map** connecting VCL, Asterisms, RSAO, and Architecture Refined to each other and to the Braid.
-7. **Resolve `oq-003`** (crypto-shredding vs. pure immutability) — this is the most consequential open design question.
+7. **~~Resolve `oq-003` / forgetting~~** — **Done 2026-07-10:** [`no-forgetting.md`](no-forgetting.md) / `oq-009` closed.

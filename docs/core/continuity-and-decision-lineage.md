@@ -1,9 +1,10 @@
 # BOBA Core: Continuity of Judgment & the Asterism of Angels
 
 **Status:** Adopted 2026-07-03. Canonical core doctrine.
-**Folds in (supersedes):** `asterism-of-angels.md` (drafted by Claude) and
-`resource-and-decision-continuity-model.md` (drafted by Codex) — two halves of
-one idea, unified here.
+**Folds in (supersedes):** earlier drafts `asterism-of-angels.md` (Claude) and
+`resource-and-decision-continuity-model.md` (Codex) — two halves of the same
+argument, now one document. Stub files removed 2026-07-10; full text remains in
+git history.
 **Audience:** Keith, future Keith, the angels, cold-reading agents.
 
 > Two drafts converged from opposite directions and turned out to describe one

@@ -13,7 +13,7 @@ operational terms, but mostly at the governance level:
 - protect autonomy from coercive steering;
 - keep Keith as orchestrator/Self, not a passive target;
 - reduce administrative actuation burden without removing judgment;
-- preserve local sovereignty and privacy-first operation;
+- preserve local custody, inspectability, and privacy-first operation;
 - require legibility, stoppability, handoffs, and recoverable steps before
   autonomy expands;
 - judge BOBA by whether it makes Keith more capable of living a life he respects.
@@ -25,15 +25,29 @@ invented from an offhand summary.
 
 ## Intake Rule
 
-Use two stages:
+Use three stages. **Preserve is not promote.** `asterisms-only` is a valid
+finished state.
 
 1. **Preserve first in Asterisms.** Anything plausibly relevant but not yet
    curated should be registered through Porter/Asterisms. This keeps original
    bytes and provenance without claiming the document belongs in the public
    corpus.
-2. **Promote deliberately into BOBA.** Only documents that are public-safe,
-   non-duplicative, and corpus-useful should be copied into this GitHub repo,
-   indexed, committed, and pushed.
+2. **Triage mandatorily** (same day or next triage pass). Every new material
+   gets an explicit **fate** in `~/asterisms/90-system/intake-triage.md`:
+
+   | Fate | Meaning |
+   |---|---|
+   | `untriaged` | Illegal to leave past weekly review |
+   | `asterisms-only` | Provenance / private / weak / disputed — done |
+   | `promote-candidate` | Needs Keith before BOBA install |
+   | `promoted` | Editable home in BOBA + `ast:` of installed version |
+   | `defer-eclosion` | Real; not needed for invitation/launch week |
+   | `surface-only` | Web/Salon/reader receipt; not core doctrine |
+
+3. **Promote deliberately into BOBA** only from `promote-candidate` after
+   review. Only documents that are public-safe, non-duplicative, and
+   corpus-useful should be copied into this GitHub repo, indexed, committed,
+   and pushed. **No auto-promote** from Salon/web collaboration into core.
 
 The GitHub BOBA corpus is a durable public/shared rail, not a dumping ground.
 The live Asterisms Home is the local continuity substrate.
@@ -86,29 +100,24 @@ For any newly found generated document:
    PY
    ```
 
-2. Classify it:
-   - `core`: foundational doctrine;
-   - `method`: process discipline;
-   - `architecture`: design candidate or report;
-   - `tooling`: verified tool facts;
-   - `session-records`: dated session/handoff;
-   - `essays`: exploratory writing;
-   - `manuscript`: longform source stream;
-   - `asterisms-only`: private, duplicate, weak, or historically useful but not
-     GitHub-corpus material.
+2. **Set a fate** in `~/asterisms/90-system/intake-triage.md` (required).
+   If the fate is `promote-candidate`, also note a tentative BOBA folder class:
+   - `core` / `method` / `architecture` / `tooling` / `session-records` /
+     `essays` / `manuscript`.
 
-3. Before public promotion, check:
+3. Before public promotion (`promote-candidate` → `promoted`), check:
    - Does it duplicate a stronger existing document?
    - Does it contain private/family/account/location details?
    - Is it source material or an AI summary of source material?
-   - Should it be indexed now, archived, or kept Asterisms-only?
+   - Is it needed for eclosion, or should it be `defer-eclosion`?
 
 4. If promoted:
    - copy it into the correct BOBA folder;
    - rebuild/evaluate the retrieval index when appropriate;
    - commit and push the BOBA repo;
    - register the promoted BOBA file into Asterisms as the canonical installed
-     version.
+     version;
+   - update the triage row to `promoted` with the BOBA path.
 
 ## Near-Term Corpus Gaps
 
