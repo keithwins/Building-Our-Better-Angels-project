@@ -132,8 +132,10 @@ The grain runs the right way; the foundation was built domain-general on purpose
 
 - **Near-term graceful-fit move (small):** give voice + Understory the **Porter
   intake seam** — their outputs are already bundle-shaped.
-- **Design work worth doing before A/V scales:** the **blob + vector sidecar spec**
-  — which is just the spine-and-spokes pattern applied twice more, not new invention.
+- **Design work worth doing before A/V scales:** the canonical
+  **[blob + vector sidecar spec](../../../asterisms-system/docs/blob-and-vector-sidecars-v0.md)**
+  in Asterisms System — which is just the spine-and-spokes pattern applied twice
+  more, not new invention. Its presence does not approve implementation.
 
 ---
 
