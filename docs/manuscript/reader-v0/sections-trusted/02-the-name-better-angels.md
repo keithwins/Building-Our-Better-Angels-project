@@ -1,7 +1,5 @@
 # Building Our Better Angels
 
-The name is a little embarrassing, which is one of its virtues.
-
 *Building Our Better Angels* echoes Lincoln's "better angels of our nature." In
 his phrase, the angels are already ours: not perfect beings arriving from above,
 but possibilities within us that can be called forward when fear, division, and

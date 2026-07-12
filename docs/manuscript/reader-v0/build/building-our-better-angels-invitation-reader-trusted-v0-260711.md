@@ -99,10 +99,10 @@ smaller.
 
 Better angels.
 
-The name is a little embarrassing, which is one of its virtues. It refuses the
-sterile dignity of enterprise software. It admits that we are talking about
-care, guidance, judgment, temptation, conscience, companionship, and the ancient
-human habit of imagining help just beyond the edge of the visible.
+The name refuses the sterile dignity of enterprise software. It admits that we
+are talking about care, guidance, judgment, temptation, conscience,
+companionship, and the ancient human habit of imagining help just beyond the
+edge of the visible.
 
 But these angels do not ask for obedience. They do not take loyalty oaths. They
 do not replace the person. They are named, bounded, inspectable participants in
@@ -301,8 +301,6 @@ We seek angels as accountable companions: named, bounded, inspectable... able to
 ---
 
 # Building Our Better Angels
-
-The name is a little embarrassing, which is one of its virtues.
 
 *Building Our Better Angels* echoes Lincoln's "better angels of our nature." In
 his phrase, the angels are already ours: not perfect beings arriving from above,

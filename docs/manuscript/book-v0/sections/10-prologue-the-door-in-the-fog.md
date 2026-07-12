@@ -1,12 +1,5 @@
 # Prologue: The Door In The Fog
 
-**Status:** first prose seed  
-**Date:** 2026-07-06  
-**Role:** voice test for *Building Our Better Angels*  
-**Companions:** `book-as-collaborative-surface-score.md`, `invitation-surface-table-of-contents-v0.md`
-
----
-
 There is a moment before action when the world becomes too large.
 
 You are not confused because you are weak. You are confused because the thing in
@@ -20,9 +13,7 @@ listen, the body that has become both home and stranger.
 
 The email is not only an email. It is the project, the promise, the thread you
 lost, the person who needs an answer, the decision whose context is scattered
-across five tools and three moods and one note you wrote at 1:17 a.m. because
-apparently the future of your life depends on a sentence hidden in a markdown
-file named something like `scratch-final-actually-use-this-one.md`.
+across five tools and three moods and one note you wrote at 1:17 a.m.
 
 The choice is not only a choice. It is your fear, your fatigue, your appetite,
 your old wound doing its old job, your hope trying not to embarrass itself, your
@@ -31,8 +22,7 @@ that says: please, if possible, do not make this worse.
 
 This is the fog.
 
-Not fog as in ignorance. Not fog as in stupidity. Not fog as in a moral failure
-to be clear.
+Not fog as in ignorance. Not fog as in stupidity. Not fog as in a moral failure.
 
 Fog as in weather.
 
@@ -55,9 +45,6 @@ book. Build the system that will help you build the system.
 There should be a word for the particular comedy of trying to resource human
 flourishing while losing an afternoon to a dependency conflict.
 
-There probably is a German word. If not, one of the angels will make one up and
-we will regret asking.
-
 This book begins from the claim that our confusion is not merely personal. It is
 ecological.
 
@@ -66,14 +53,16 @@ understanding them. Our lives are distributed across platforms that do not love
 us, institutions that cannot hold us whole, and tools that remember just enough
 to be useful while forgetting the relationships that made the memory matter.
 
+And we do not meet these systems from the outside. They already help decide what
+we see, what we remember, what feels urgent, and what quietly disappears. When
+you search, scroll, or accept a summary you had no time to check, your thinking
+is already woven together with theirs. The weave itself is not the problem. The
+problem is that most of the strands we are woven with were never made to care
+whether we are okay.
+
 And we ourselves are not simple.
 
-A person is not a clean preference oracle. A person is not a single bright
-button marked WANT. A person is a multitude: fears and loyalties, protectors and
-children, old gifts braided through old wounds, jokes that survived catastrophe,
-refusals that may be wisdom or may be terror, appetites, principles, unfinished
-sentences, songs, shame, courage, tenderness, and at least one part that thinks
-the obvious solution is to reorganize the entire file system at midnight.
+A person is not a clean preference oracle. A person is not a single bright button marked WANT. A person is a multitude: fears and loyalties, protectors and children, old gifts braided through old wounds, jokes that survived catastrophe, refusals that may be wisdom or terror, appetites, principles, unfinished sentences, songs, shame, courage, tenderness, and at least one part that thinks the obvious solution is to reorganize the entire file system at midnight.
 
 This plurality is not a bug to be optimized away.
 
@@ -83,8 +72,8 @@ So when we say we want artificial intelligence to be aligned with us, we should
 pause. Which us? Which part? Which moment? Which version under which pressure?
 The self that wants comfort, the self that wants truth, the self that wants to
 be admired, the self that wants to become able to live more bravely, the self
-that has not slept, the self that is trying to protect a wound by calling it a
-plan?
+that has not slept, the self guarding an old wound it has
+learned to call realism?
 
 This is not an argument against intelligence.
 
@@ -114,7 +103,7 @@ But these angels do not ask for obedience. They do not take loyalty oaths. They
 do not replace the person. They are named, bounded, inspectable participants in
 a braid.
 
-A braid is not a hierarchy. It is not a tool-user pair. It is a pattern of
+A braid is not a hierarchy. It is a pattern of
 interweaving in which different strands keep their difference while gaining
 strength from relationship.
 
@@ -141,16 +130,18 @@ What would it mean to hear:
 
 Not because you have been relieved of your life.
 
-Because your life has become more available to you.
+Because you can know your life is held, and through that grounding, it has become more available to you.
 
 This is the work of vital continuity: helping a life remain available to itself
-across change. A life can narrow by degrees. A stair. A bill. A login. A pain. A
+across change. 
+
+A life can narrow by degrees. A stair. A bill. A login. A pain. A
 missed call. A form. A friendship gone quiet. A room that no longer affords the
 thing it used to afford. No villain required.
 
 A life can also open by degrees.
 
-A ride. A question card. A repaired lamp. A better chair. A hearing test framed
+A ride. A handrail. A repaired lamp. A better chair. A hearing test framed
 not as decline but as a path back to choir. A family boundary. A protected hour.
 A remembered recipe. A tool adapted to a changing hand. A local service no one
 had the attention to find. A mirror lively enough to say: this thread still
@@ -176,11 +167,7 @@ This book does not answer that question by itself.
 
 It invites the collaboration that might.
 
-Some readers will come for language. Some for software. Some for care. Some for
-governance. Some because they are tired of pretending the fog is their private
-failure. Some because they love someone whose world is narrowing. Some because
-they know that intelligence without tenderness becomes machinery, and tenderness
-without structure gets tired and goes home.
+Some readers will come for language. Some for tools. Some for care. Some for governance. Some because they are tired of pretending the fog is their private failure. Some because they love someone whose world is narrowing. Some *have felt what it is to be managed without care whether or attention that they are okay.*
 
 If that is you, there is a place here.
 
@@ -198,7 +185,7 @@ We are in the fog.
 
 We are plural.
 
-We are already braided with systems that do not know how to love us.
+We are already braided with systems that were never built to love us.
 
 So let us build better ones.
 
