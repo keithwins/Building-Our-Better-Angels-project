@@ -19,6 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
     architecture: "../docs/architecture/",
     method: "../docs/method/",
     manuscript: "../docs/manuscript/",
+    "reader-v0-root": "../docs/manuscript/reader-v0/",
+    "reader-v0": "../docs/manuscript/reader-v0/sections/",
   };
 
   function escapeRegExp(s) {

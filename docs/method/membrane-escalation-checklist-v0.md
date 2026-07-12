@@ -8,6 +8,10 @@
 
 For each entry (or batch in a session), ask:
 
+0. **Reader / book edit?** — If the ref is under `docs/manuscript/reader-v0/`,
+   the editorial work may stay on the floor through many partial rewrites in
+   conversation. Capture to a section file when settled enough; do not patch
+   files silently without a Salon receipt trail.
 1. **Ignore / leave on floor** — noise, already answered, or wallflower-appropriate.
 2. **Answer on floor** — short claim with `refs`; no durable change.
 3. **Open / update an open question** — unsettled; stays visible in `open-questions.jsonl`.

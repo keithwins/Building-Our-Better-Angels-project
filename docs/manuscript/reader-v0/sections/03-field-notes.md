@@ -175,8 +175,9 @@ the person whose life it is.
 ## Salon Is Already A Surface
 
 The Salon is not merely a mock comment box or future website idea. It is already
-a persistent conversation rail where Keith, Claude, Codex, and future
-participants can leave situated material that the project can integrate.
+an append-only surface for claims-with-receipts, where Keith, Claude, Codex, and
+future participants leave material that the project can test, answer, or
+integrate.
 
 That matters for the book.
 

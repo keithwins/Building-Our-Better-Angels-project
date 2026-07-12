@@ -1,33 +1,18 @@
 # Open Gates
 
-This packet is allowed to exist before the gates are closed. It is not allowed
-to forget that they are open.
+This packet is allowed to exist before every gate is closed. It is not allowed
+to forget which gates remain open.
 
-## Gate 1: Public/Private Seam (`oq-001`)
+## Gate 1: Public/Private Seam (`oq-001`) — CLOSED 2026-07-10
 
-The book needs a practical doctrine for what can move into public prose from:
+**Adopted:** [`docs/core/public-private-seam.md`](../../core/public-private-seam.md).
 
-- the Walk;
-- the Fog stream;
-- Drive;
-- the local corpus;
-- Salon;
-- Asterisms;
-- GitHub;
-- session records;
-- private conversations.
+Five classes (public; synthesis-only; quotable-with-consent; must-not-expose;
+sensitive/confidential including **self-facing pacing** under Resonator).
+Keith-copy ungated; trusted-reader / invitation allowlist gated. Stream defaults
+and practical rules live in the canonical doc.
 
-The doctrine does not need to be perfect before Keith prints this copy. It does
-need to exist before the book is handed outward as a trusted-reader artifact.
-
-The rule should probably distinguish at least:
-
-- public source;
-- private source used only for synthesis;
-- private source quotable with explicit consent;
-- private source that may shape the work but must not be exposed;
-- sensitive source that requires omission, local-only treatment, or
-  confidential-class access control (not “forgetting” — see Gate 2).
+Reader-v0 may state this as settled doctrine. Gates 3–5 below still apply.
 
 ## Gate 2: No Forgetting (`oq-009`) — CLOSED 2026-07-10
 
@@ -84,10 +69,11 @@ The current packet marks the need but does not yet solve the chapter.
 
 Print for Keith: yes.
 
-Hand to trusted outside reader: not yet, unless handed as an explicitly rough
-source packet with the gates visible.
+Hand to trusted outside reader: not yet solely for want of oq-001/oq-009 —
+those are closed. Still wait on Gate 3 (Multitude lineage) and unfinished
+chapters unless handed as an explicitly rough packet with remaining gates visible.
 
-_Source refs: salon/open-questions.jsonl entries oq-001 and oq-009;
-docs/manuscript/printable-coffee-shop-reader-readiness-v0.md;
-Salon entry 2026-07-07T00:28:38Z._
+_Source refs: salon/open-questions.jsonl oq-001 (closed) and oq-009 (closed);
+docs/core/public-private-seam.md; docs/core/no-forgetting.md;
+docs/manuscript/printable-coffee-shop-reader-readiness-v0.md._
 

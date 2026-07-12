@@ -3,7 +3,7 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 VERSION="${VERSION:-v0}"
-BUILD_STAMP="${BUILD_STAMP:-260707}"
+BUILD_STAMP="${BUILD_STAMP:-260710}"
 OUT_DIR="$ROOT/build"
 OUT="$OUT_DIR/building-our-better-angels-invitation-reader-${VERSION}-${BUILD_STAMP}.md"
 PROLOGUE="$ROOT/../00-prologue-the-door-in-the-fog.md"

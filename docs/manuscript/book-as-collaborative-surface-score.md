@@ -204,3 +204,18 @@ It should end by making the reader feel the door open:
 The last movement is not closure.
 
 It is eclosion.
+
+## 11. Salon as the editorial surface
+
+The book is a collaborative surface in prose. **Editing lives on the Salon
+floor** — scoped to the reader section, source essay, or chapter seed being read
+on the orientation web.
+
+Margin notes, objections, pressure tests, and revision claims belong in
+`salon/salon-log.jsonl` with `refs` pointing at the document under edit.
+Rewriting is hashed out in the conversation, in degrees. Section files change
+when a thread has settled enough to **capture on disk** — not as a separate
+ritual from the conversation, but without silent edits that leave no trail.
+
+Rebuild scripts (`build-reader-v0.sh`) assemble section sources after capture;
+they do not replace Salon as where the braid argues with the book.

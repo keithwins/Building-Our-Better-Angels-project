@@ -10,9 +10,9 @@ packet.
 
 - Packet: *Building Our Better Angels: An Invitation Reader*
 - Version: `reader-v0`
-- Build stamp: `260707`
+- Build stamp: `260710`
 - Generated output:
-  `docs/manuscript/reader-v0/build/building-our-better-angels-invitation-reader-v0-260707.md`
+  `docs/manuscript/reader-v0/build/building-our-better-angels-invitation-reader-v0-260710.md`
 - Build command: `bash docs/manuscript/reader-v0/build-reader-v0.sh`
 - Intended audience: Keith-copy
 
@@ -31,7 +31,7 @@ packet.
 | Asterisms notes | `docs/essays/Asterisms260702.md` | adaptable |
 | VCL / elderhood notes | VCL essay; elderhood essay; Asterism Aflutter sketch | strong seed |
 | Salon note | Salon log and web orientation note | real surface, web UI pending |
-| Open gates | `salon/open-questions.jsonl`; Claude redline | active |
+| Open gates | `salon/open-questions.jsonl`; Claude redline; gates 1–2 closed 2026-07-10 | active |
 
 ## External/Record References
 
@@ -49,7 +49,8 @@ packet.
 - Add line references or anchors once manuscript sections are split into stable
   chapter files.
 - Record any direct quotes separately from synthesized source debts.
-- Mark source sensitivity once `oq-001` is ruled.
+- ~~Mark source sensitivity once `oq-001` is ruled.~~ **Done 2026-07-10:**
+  [`public-private-seam.md`](../../core/public-private-seam.md).
 - ~~Mark forgetting/shrouding doctrine once `oq-009` is ruled.~~ **Done 2026-07-10:**
   [`no-forgetting.md`](../../core/no-forgetting.md).
 

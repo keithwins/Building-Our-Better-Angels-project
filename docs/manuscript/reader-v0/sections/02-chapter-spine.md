@@ -8,7 +8,7 @@ is an invitation to help make it exist.
 
 ## Prologue: The Door In The Fog
 
-A person stands at the wobbly edge, not because they are weak, but because the
+A person stands at the wobbly edge of the diving board, not because they are weak, but because the
 world has become too wide, fast, opaque, and consequential to hold in one mind.
 
 The book opens by refusing to treat confusion as merely personal failure.
@@ -19,7 +19,7 @@ Modern life asks finite beings to act inside systems they cannot fully audit.
 The fog is not stupidity. It is weather: the condition of living inside nested
 intelligences and frames no one can see all at once.
 
-Open question: where are we mistaking ecological fog for private defect?
+Open question: where are we mistaking ecological fog for our private defect [blindness? handicap? better word]?
 
 ## 2. The Wobbly Edge
 
@@ -27,8 +27,7 @@ The wobbly edge is the moment before consequential action when the field of
 affordances collapses. The first answer is not automation or command. It is a
 surface that makes judgment possible again.
 
-Open question: what decision becomes possible if the field around it is made
-visible?
+Open question: when the unmanageable breadth of demands is overwhelming, how can it be compressed to our bandwidth while preserving most accurately the elements of our lives we will come to care most about. The driver's license update might happen behind the scenes; the hike with a friend requires our own legs. [not great, but better]
 
 ## 3. The Multitude
 
@@ -48,7 +47,7 @@ Obedience is not care. Flattery is not alignment. A better angel does not ask to
 replace judgment or pledge loyalty to the loudest part of the person. It enters
 a braid: bounded, inspectable, disagreeable, and recorded.
 
-Open question: what would dignified disagreement from an intelligence feel like?
+Open question: what does dignified disagreement with an intelligence feel like — and under what conditions do we attempt harmonization versus preserve difference as reasonable disagreement?
 
 ## 5. Scores, Not Leashes
 
@@ -56,7 +55,7 @@ Finite human attention cannot audit every move. Useful trust needs a grammar
 between total control and total release: harnesses for untrusted actors, scores
 for trusted angels, and a way for trust to grow or narrow through behavior.
 
-Open question: where do you need a score rather than a task list?
+Open question: where do you need a score rather than a harness?
 
 ## 6. Trust Further Than You Can Throw
 
@@ -125,9 +124,8 @@ Emergence is not finality. A human bean is ridiculous and sacred enough to keep.
 A life, a collaboration, and an ecosystem can become more available to
 themselves.
 
-_Source refs: docs/manuscript/invitation-surface-table-of-contents-v0.md;
+*Source refs: docs/manuscript/invitation-surface-table-of-contents-v0.md;
 docs/essays/the_fog_260629.md; docs/essays/the-wobbly-edge.md;
 docs/core/boba-braid.md; docs/essays/Asterisms260702.md;
 docs/essays/Vital Continuity Layer 260629.md;
-docs/essays/asterism-aflutter-interaction-sketch.md._
-
+docs/essays/asterism-aflutter-interaction-sketch.md.*

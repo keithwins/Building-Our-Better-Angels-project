@@ -69,9 +69,10 @@ Claude's Salon redline sharpens the practical rule:
 
 Trusted-reader release has three current gates:
 
-- **`oq-001`: public/private seam.** The book needs a ruling on what can move
-  from the Walk, Fog stream, Drive, corpus, Salon, Asterisms, and GitHub into a
-  public artifact.
+- ~~**`oq-001`: public/private seam.**~~ **CLOSED 2026-07-10** —
+  [`public-private-seam.md`](../core/public-private-seam.md). Five classes;
+  Keith-copy ungated; trusted-reader / allowlist gated; self-facing pacing under
+  Resonator. Trusted-reader may state this as settled.
 - ~~**`oq-009`: forgetting doctrine.**~~ **CLOSED 2026-07-10** —
   [`no-forgetting.md`](../core/no-forgetting.md). No forgetting; no crypto-shred;
   shrouding-as-forget retired. Trusted-reader may state this as settled.

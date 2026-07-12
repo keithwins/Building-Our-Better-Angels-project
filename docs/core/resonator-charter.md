@@ -3,7 +3,7 @@ title: The Resonator Charter
 status: DRAFT — provisional, pre-build
 date: 2026-07-05
 naming: "The Resonator" names a continuous mirroring presence of care, rejecting clinical relegation and intrusive familiarity
-companions: ephemeris-charter.md, elder-angels-scope.md, continuity-and-decision-lineage.md, no-forgetting.md, ../architecture/system-fit-integration-map.md
+companions: ephemeris-charter.md, elder-angels-scope.md, continuity-and-decision-lineage.md, no-forgetting.md, public-private-seam.md, ../architecture/system-fit-integration-map.md
 provenance: Keith + Claude Code + Antigravity dialogue, 260704-260705
 ---
 
@@ -36,6 +36,12 @@ The Asterisms store is **immutable and governable** — nobody can silently rewr
 **Load-bearing consequence:** because the store is *immutable*, a plaintext session, once written, cannot be cleanly walked back. Therefore, **encrypt first, then confide.** No real session enters the store until a confidential data class exists.
 
 **No forgetting:** encryption and access control are not a forgetting path. There is no crypto-shred, no key-fading-to-oblivion, and no “shrouding” that destroys recoverable history. `oq-009` closed 2026-07-10 — see [`no-forgetting.md`](no-forgetting.md). Change of mind or reframing = new formations over immutable past.
+
+**Self-facing pacing (oq-001 class 5(b)):** the Resonator owns the duty not to
+ambush. Material that is sensitive *to Keith* (PTSD-class, wounds, anything that
+should stay available in the ledger but not leap into the room unbidden) must
+not be surfaced as casual “helpfulness.” Hold under consent, context, or
+chartered judgment. See [`public-private-seam.md`](public-private-seam.md).
 
 We apply a governance envelope `confidential:resonator` at intake. The registry **inherits governance into every derivative and embedding** (`_governance_for_output`) — so a summary or vector of a session is confidential *by construction*. This inheritance is our primary security mechanism.
 

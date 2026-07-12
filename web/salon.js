@@ -66,7 +66,11 @@
   .salon-entry .who { font: 600 11px var(--font-mono, monospace); color: var(--accent-amber, #d9a441); margin-right: 6px; }
   .salon-entry .when { font: 10.5px var(--font-mono, monospace); color: var(--text-muted, #888); }
   .salon-entry .kind { font: 10.5px var(--font-mono, monospace); color: var(--text-muted, #777); margin-left: 6px; }
-  .salon-empty { font-size: 12.5px; color: var(--text-muted, #999); }`;
+  .salon-details { margin-top: 12px; border-top: 1px solid var(--border-color, #444); padding-top: 8px; }
+  .salon-details summary { cursor: pointer; font-size: 12px; color: var(--text-muted, #999);
+    letter-spacing: .06em; margin-bottom: 8px; user-select: none; }
+  .salon-details[open] summary { margin-bottom: 10px; }
+`;
   const style = document.createElement("style");
   style.textContent = css;
   document.head.appendChild(style);
@@ -117,6 +121,24 @@
     return el ? (el.dataset.target || "") : "";
   }
 
+  function activeDocRef() {
+    const el = document.querySelector(".nav-item.active");
+    if (!el) return "";
+    const file = el.dataset.target || "";
+    const dir = el.dataset.dir || "";
+    const DIR_TO_REPO = {
+      core: "Building-Our-Better-Angels-project/docs/core/",
+      essays: "Building-Our-Better-Angels-project/docs/essays/",
+      architecture: "Building-Our-Better-Angels-project/docs/architecture/",
+      method: "Building-Our-Better-Angels-project/docs/method/",
+      manuscript: "Building-Our-Better-Angels-project/docs/manuscript/",
+      "reader-v0-root": "Building-Our-Better-Angels-project/docs/manuscript/reader-v0/",
+      "reader-v0": "Building-Our-Better-Angels-project/docs/manuscript/reader-v0/sections/",
+    };
+    const prefix = DIR_TO_REPO[dir];
+    return prefix && file ? prefix + file : file;
+  }
+
   function latestPerId(rows) {
     const m = new Map();
     for (const r of rows) if (r.id) m.set(r.id, { ...(m.get(r.id) || {}), ...r });
@@ -129,8 +151,34 @@
     );
   }
 
-  function refersToPage(e, doc) {
-    return !!doc && (e.refs || []).some((r) => r.includes(doc));
+  function refersToPage(e, doc, docRef) {
+    if (!doc) return true;
+    const tokens = [doc, docRef].filter(Boolean);
+    return (e.refs || []).some((r) =>
+      tokens.some((t) => r === t || r.endsWith("/" + doc) || r.includes("/" + doc) || r === doc)
+    );
+  }
+
+  /** Page thread: anchor entries with refs to this doc, then continuations (e.g. agent
+   *  replies that forgot to repeat the ref) until another page's refs appear. */
+  function entriesForPage(logRows, doc) {
+    if (!doc) return logRows || [];
+    const docRef = activeDocRef();
+    const out = [];
+    let threadOpen = false;
+    for (const e of logRows || []) {
+      const onPage = refersToPage(e, doc, docRef);
+      const hasRefs = (e.refs || []).length > 0;
+      if (onPage) {
+        threadOpen = true;
+        out.push(e);
+      } else if (threadOpen && !hasRefs) {
+        out.push(e);
+      } else if (hasRefs) {
+        threadOpen = false;
+      }
+    }
+    return out;
   }
 
   function shortDocLabel(doc) {
@@ -142,9 +190,10 @@
   }
 
   function openQuestionsForDoc(qRows, doc) {
+    const docRef = activeDocRef();
     const latest = latestPerId(qRows || []).filter((q) => q.status === "open" || q.status === "claimed");
-    const contextual = doc ? latest.filter((q) => refersToPage(q, doc)) : [];
-    const general = latest.filter((q) => !doc || !refersToPage(q, doc));
+    const contextual = doc ? latest.filter((q) => refersToPage(q, doc, docRef)) : [];
+    const general = latest.filter((q) => !doc || !refersToPage(q, doc, docRef));
     return { contextual, general, latest };
   }
 
@@ -161,10 +210,11 @@
   }
 
   function buildHandoffMarkdown({ doc, qGroups, rows, agents }) {
+    const docRef = activeDocRef();
     const stamp = new Date().toISOString().replace(/\.\d{3}Z$/, "Z");
     const docLabel = shortDocLabel(doc);
     const title = `Salon Handoff — ${docLabel}`;
-    const context = doc ? `Current document: ${doc}` : "Current document: whole floor";
+    const context = docRef ? `Current document: ${docRef}` : doc ? `Current document: ${doc}` : "Current document: whole floor";
     const scopeLine = scope === "page" ? "Conversation scope: this page" : "Conversation scope: whole floor";
     const agentLine = agents?.length ? `Participants observed: ${agents.map((p) => p.name).join(", ")}` : "Participants observed: none";
     const openQuestionLines = [
@@ -178,7 +228,7 @@
 title: ${title}
 status: draft
 date: ${stamp}
-source_doc: ${doc || "floor"}
+source_doc: ${docRef || doc || "floor"}
 ---
 
 # ${title}
@@ -264,8 +314,10 @@ ${nextSteps.map((step) => `- ${step}`).join("\n")}
     const text = (ta.value || "").trim();
     if (!text) return;
     const doc = activeDoc();
+    const docRef = activeDocRef();
     const refs = [...composeRefs];
-    if (doc && pageScoped && !refs.includes(doc)) refs.push(doc);
+    if (docRef && pageScoped && !refs.includes(docRef)) refs.push(docRef);
+    else if (doc && pageScoped && !refs.includes(doc)) refs.push(doc);
     const to = [...selectedTo].map((n) => "@" + n);
     note.textContent = "sending…";
     try {
@@ -290,42 +342,17 @@ ${nextSteps.map((step) => `- ${step}`).join("\n")}
 
   async function render() {
     const doc = activeDoc();
+    const docRef = activeDocRef();
     const docName = doc ? doc.replace(/\.md$|\.html$/, "") : "";
     const [qRows, logRows, agents] = await Promise.all([
       fetchJsonl(QUESTIONS_URL), fetchJsonl(LOG_URL), fetchParticipants(),
     ]);
     const qGroups = openQuestionsForDoc(qRows || [], doc);
-    const floorRows = scope === "page" && doc ? (logRows || []).filter((e) => refersToPage(e, doc)) : (logRows || []);
+    const floorRows = scope === "page" && doc ? entriesForPage(logRows, doc) : (logRows || []);
     lastSnapshot = { qGroups, rows: floorRows, agents: agents || [] };
 
     let html = `<div class="salon-title">comment-cycle · <b>${esc(docName || "the whole floor")}</b></div>`;
     html += composerHtml(doc, agents || []);
-
-    html += "<h3>Open questions</h3>";
-    if (!qRows) {
-      html += '<div class="salon-empty">Could not reach /salon/open-questions.jsonl.</div>';
-    } else {
-      const open = qGroups.latest;
-      open.sort((a, b) => (refersToPage(b, doc) ? 1 : 0) - (refersToPage(a, doc) ? 1 : 0) || (a.id < b.id ? -1 : 1));
-      if (!open.length) html += '<div class="salon-empty">No open questions. Suspicious.</div>';
-      for (const q of open) {
-        const here = refersToPage(q, doc);
-        html += `<div class="salon-q${here ? " contextual" : ""}">
-          <div class="q-text">${esc(q.question)}</div>
-          <div class="q-meta">${q.id} · ${esc(q.asked_by || "?")}${q.status === "claimed" ? " · claimed by " + esc(q.claimed_by || "?") : ""}${here ? ' · <span class="q-here">this page</span>' : ""}</div>
-          <button data-answer="${q.id}">answer</button>
-        </div>`;
-      }
-    }
-
-    html += "<h3>Next steps</h3>";
-    html += `<div class="salon-section"><ul>${nextStepsFromQuestions(qGroups).map((step) => `<li>${esc(step)}</li>`).join("")}</ul></div>`;
-
-    html += "<h3>Handoff draft</h3>";
-    html += `<div class="salon-section">
-      <div class="hint">This is the session-record draft that can be written to disk for the next intelligence.</div>
-      <div class="salon-handoff-preview" id="handoff-preview">${esc(buildHandoffMarkdown({ doc, qGroups, rows: floorRows, agents: agents || [] }))}</div>
-    </div>`;
 
     html += "<h3>Conversation</h3>";
     html += `<div class="salon-scope">
@@ -335,15 +362,45 @@ ${nextSteps.map((step) => `- ${step}`).join("\n")}
     if (!logRows || !logRows.length) {
       html += '<div class="salon-empty">The floor is quiet.</div>';
     } else {
-      const rows = scope === "page" && doc ? logRows.filter((e) => refersToPage(e, doc)) : logRows;
+      const rows = floorRows;
       if (!rows.length) {
         html += `<div class="salon-empty">Nothing said about this page yet. Start the cycle.</div>`;
       } else {
-        for (const e of rows.slice(-10).reverse()) {
+        for (const e of rows.slice(-12).reverse()) {
           html += `<div class="salon-entry"><span class="who">${esc(e.author || "?")}</span><span class="when">${esc((e.ts || "").replace("T", " ").replace("Z", ""))}</span><span class="kind">${esc(e.kind || "")}</span><div>${esc(e.text || "")}</div></div>`;
         }
       }
     }
+
+    html += '<details class="salon-details"><summary>Open questions</summary>';
+    if (!qRows) {
+      html += '<div class="salon-empty">Could not reach /salon/open-questions.jsonl.</div>';
+    } else {
+      const open = qGroups.latest;
+      open.sort((a, b) => (refersToPage(b, doc, docRef) ? 1 : 0) - (refersToPage(a, doc, docRef) ? 1 : 0) || (a.id < b.id ? -1 : 1));
+      if (!open.length) html += '<div class="salon-empty">No open questions. Suspicious.</div>';
+      for (const q of open) {
+        const here = refersToPage(q, doc, docRef);
+        html += `<div class="salon-q${here ? " contextual" : ""}">
+          <div class="q-text">${esc(q.question)}</div>
+          <div class="q-meta">${q.id} · ${esc(q.asked_by || "?")}${q.status === "claimed" ? " · claimed by " + esc(q.claimed_by || "?") : ""}${here ? ' · <span class="q-here">this page</span>' : ""}</div>
+          <button data-answer="${q.id}">answer</button>
+        </div>`;
+      }
+    }
+    html += "</details>";
+
+    html += `<details class="salon-details"><summary>Next steps</summary>
+      <div class="salon-section"><ul>${nextStepsFromQuestions(qGroups).map((step) => `<li>${esc(step)}</li>`).join("")}</ul></div>
+    </details>`;
+
+    html += `<details class="salon-details"><summary>Handoff draft</summary>
+      <div class="salon-section">
+        <div class="hint">Session-record draft for the next intelligence.</div>
+        <div class="salon-handoff-preview" id="handoff-preview">${esc(buildHandoffMarkdown({ doc, qGroups, rows: floorRows, agents: agents || [] }))}</div>
+      </div>
+    </details>`;
+
     panel.innerHTML = html;
 
     // wire events

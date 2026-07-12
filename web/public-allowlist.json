@@ -1,6 +1,6 @@
 {
   "version": "260710",
-  "purpose": "Docs the orientation web may show as the public/invitation spine. Not the whole vault. Operator/mechanism docs stay out of nav.",
+  "purpose": "Docs the orientation web may show as the public/invitation spine. Not the whole vault. Reader v0 sections are Salon-editable surfaces. Operator/mechanism docs stay out of nav.",
   "documents": [
     {"id": "fog", "file": "the_fog_260629.md", "dir": "essays", "nav": "Invitation", "label": "The Fog"},
     {"id": "wobbly", "file": "the-wobbly-edge.md", "dir": "essays", "nav": "Invitation", "label": "The Wobbly Edge"},
@@ -13,6 +13,7 @@
     {"id": "ephemeris-charter", "file": "ephemeris-charter.md", "dir": "core", "nav": "Core", "label": "Ephemeris Charter"},
     {"id": "social-protocol", "file": "social-protocol-of-angelic-outreach-v0.md", "dir": "core", "nav": "Core", "label": "Social Protocol"},
     {"id": "no-forgetting", "file": "no-forgetting.md", "dir": "core", "nav": "Core", "label": "No Forgetting (oq-009)"},
+    {"id": "public-private-seam", "file": "public-private-seam.md", "dir": "core", "nav": "Core", "label": "Public/Private Seam (oq-001)"},
     {"id": "how-we-work", "file": "how-we-work-here.md", "dir": "method", "nav": "Core", "label": "How We Work Here"},
     {"id": "vcl", "file": "Vital Continuity Layer 260629.md", "dir": "essays", "nav": "Lives", "label": "Vital Continuity Layer"},
     {"id": "little-flea", "file": "Little-Flea-Foundational-v2-260703.md", "dir": "essays", "nav": "Lives", "label": "Little Flea"},
@@ -21,6 +22,13 @@
     {"id": "book-plan", "file": "book-publishing-plan.md", "dir": "core", "nav": "Book", "label": "Publishing Plan"},
     {"id": "book-score", "file": "book-as-collaborative-surface-score.md", "dir": "manuscript", "nav": "Book", "label": "Book as Collaborative Surface"},
     {"id": "prologue", "file": "00-prologue-the-door-in-the-fog.md", "dir": "manuscript", "nav": "Book", "label": "Prologue"},
+    {"id": "reader-readme", "file": "README.md", "dir": "reader-v0-root", "nav": "Reader v0", "label": "Reader — how to edit"},
+    {"id": "reader-title", "file": "00-title-and-status.md", "dir": "reader-v0", "nav": "Reader v0", "label": "Title & status"},
+    {"id": "reader-how", "file": "01-how-to-read.md", "dir": "reader-v0", "nav": "Reader v0", "label": "How to read"},
+    {"id": "reader-spine", "file": "02-chapter-spine.md", "dir": "reader-v0", "nav": "Reader v0", "label": "Chapter spine"},
+    {"id": "reader-notes", "file": "03-field-notes.md", "dir": "reader-v0", "nav": "Reader v0", "label": "Field notes"},
+    {"id": "reader-gates", "file": "04-open-gates.md", "dir": "reader-v0", "nav": "Reader v0", "label": "Open gates"},
+    {"id": "reader-lineage", "file": "appendix-g-manuscript-lineage.md", "dir": "reader-v0", "nav": "Reader v0", "label": "Appendix G — lineage"},
     {"id": "membrane", "file": "selective-collaboration-membrane-v0.md", "dir": "architecture", "nav": "How to enter", "label": "Collaboration Membrane"},
     {"id": "thin-cut", "file": "collaboration-surface-thin-cut-260710.md", "dir": "architecture", "nav": "How to enter", "label": "Thin collaboration cut"},
     {"id": "escalation", "file": "membrane-escalation-checklist-v0.md", "dir": "method", "nav": "How to enter", "label": "Escalation checklist (Keith)"}

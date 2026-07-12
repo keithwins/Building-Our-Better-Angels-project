@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import os
 import html
 import re
 from pathlib import Path
@@ -10,7 +11,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MANUSCRIPT = ROOT.parent
-OUT = ROOT / "print" / "building-our-better-angels-tonight-reader-v0-260707.html"
+BUILD_STAMP = os.environ.get("BUILD_STAMP", "260710")
+OUT = ROOT / "print" / f"building-our-better-angels-tonight-reader-v0-{BUILD_STAMP}.html"
 
 
 def read(path: Path) -> str:
@@ -540,13 +542,13 @@ def build() -> None:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Building Our Better Angels: Tonight Reader v0 260707</title>
+  <title>Building Our Better Angels: Tonight Reader v0 {BUILD_STAMP}</title>
   <style>{css()}</style>
 </head>
 <body>
   <main class="book">
     <section class="title-page">
-      <div class="eyebrow">Tonight reading copy / reader-v0 / 260707</div>
+      <div class="eyebrow">Tonight reading copy / reader-v0 / {BUILD_STAMP}</div>
       <div>
         <h1>Building Our Better Angels</h1>
         <h2>An Invitation Reader</h2>

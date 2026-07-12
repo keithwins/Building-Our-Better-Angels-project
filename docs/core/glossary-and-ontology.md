@@ -80,6 +80,21 @@ A situated presentation of the corpus—a map of where you stand, what projects 
 2.  **Editable Maps:** The person can shake the map, disagree with the framing, and manually redraw the boundaries.
 3.  **Immutable Receipts:** The system cannot edit the history of the maps it has drawn. If it drifts into framing reality to please the user, that pattern is recorded permanently on the ledger, making the lens itself auditable.
 
+### Adjacency of Topias (AoT)
+The recognition that supportive and dangerous arrangements are often adjacent
+configurations of the same capability rather than distant technological
+destinations. A system able to understand enough of a person to protect,
+support, or reveal them may, under a nearby change in governance, incentives,
+access, or framing, surveil, expose, or manipulate them. Utopian and dystopian
+possibilities therefore touch at operational seams.
+
+BOBA does not answer this adjacency by refusing memory or understanding.
+Sensitive material may be durably recorded under local custody. The work is to
+make observability, inference, access, derivation, egress, and influence
+legible and governable while preserving Self-authorship. AoT names the shiver
+at that boundary and the obligation to design there consciously rather than
+pretend the beneficial configuration cannot become its neighbor.
+
 ### The Ephemeris
 The coordination layer of the braid (time / motion). It tracks where angels,
 agents, work, and Keith are and are headed — coordinating **by shared reference,
@@ -120,6 +135,10 @@ While the Asterisms ledger is mathematically un-rewritable, humans biologically 
 
 ### No Forgetting
 **Adopted 2026-07-10** (`oq-009` closed). There is no forgetting path on the durable substrate: no deletion of history, no crypto-shredding, no key-fading-to-oblivion. “Shrouding” as a euphemism for forgetting is retired. Confidentiality (encryption, access control, egress stomata) is not forgetting. Full ruling: [`no-forgetting.md`](./no-forgetting.md).
+
+### Public / private seam
+
+**Adopted 2026-07-10** (`oq-001` closed). Doctrine for what may enter trusted-reader / eclosion-public artifacts. Keith-copy ungated. Five classes including self-facing sensitivity (do not ambush) under Resonator care. Practical cut: invitation allowlist + membrane. Full ruling: [`public-private-seam.md`](./public-private-seam.md).
 
 ### The Social Protocol of Angelic Outreach
 The grammar of relationship coordination. It defines how separate, private local braids introduce themselves, negotiate trust boundaries, and coordinate shared actions (e.g., eldercare alerts or collaborative projects) without exposing their users' confidential databases, protecting local autonomy across relationships.
