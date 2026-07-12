@@ -1,5 +1,14 @@
 # BOBA Corpus Intake Plan
 
+**Status:** superseded 2026-07-12
+**Current BOBA queue:** [`boba-corpus-intake-queue-v0.md`](boba-corpus-intake-queue-v0.md)
+**Current fate ledger:** `~/asterisms/90-system/intake-triage.md`
+
+This document is retained as an earlier planning snapshot. Do not use its
+priorities, privacy placeholders, or open-question list as the living intake
+workflow. Current intake is preserve-first/promote-later through the BOBA queue,
+with a mandatory explicit fate in the Asterisms intake triage ledger.
+
 **Purpose:** Decide which document streams belong in the GitHub corpus, in what order, and how to treat them.
 
 ---

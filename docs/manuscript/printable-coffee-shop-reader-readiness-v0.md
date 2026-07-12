@@ -1,9 +1,9 @@
 # Printable Coffee-Shop Reader Readiness v0
 
-**Status:** working assessment  
-**Date:** 2026-07-06  
+**Status:** reader-v0 assembled; trusted-reader edition published; finished book still early
+**Date:** 2026-07-12 (status refresh; original assessment 2026-07-06)
 **Role:** answer to "how close are we to a book I can print out and read in a coffee shop?"  
-**Companions:** `book-as-collaborative-surface-score.md`, `invitation-surface-table-of-contents-v0.md`, `00-prologue-the-door-in-the-fog.md`
+**Companions:** [`reader-v0/README.md`](reader-v0/README.md), `book-as-collaborative-surface-score.md`, `invitation-surface-table-of-contents-v0.md`, `00-prologue-the-door-in-the-fog.md`
 
 ---
 
@@ -11,20 +11,21 @@
 
 We are not yet close to a finished book.
 
-We are close to a **printable invitation reader**: a coherent coffee-shop packet
-that Keith can print, read end to end, mark up, and use to decide whether the
-book's voice and spine are alive.
+A **printable invitation reader now exists**: `reader-v0` is a coherent
+coffee-shop packet that Keith can print, read end to end, mark up, and use to
+decide whether the book's voice and spine are alive. A trusted-reader edition
+dated 2026-07-11 was also built in Markdown, HTML, and PDF, then preserved
+through Porter by 2026-07-12.
 
 That reader should not pretend to be final. Its job is to make the book real
 enough to sit with.
 
 There are two different readiness thresholds:
 
-- **Keith-copy:** no gate beyond enough coherence to print, read, and mark.
-  This can be assembled now.
-- **Trusted-reader copy:** gated by doctrine and source lineage questions. This
-  should not be handed out as "the book" until the gates below are resolved or
-  explicitly marked local-only or omitted.
+- **Keith-copy:** assembled and printable in `reader-v0`.
+- **Trusted-reader copy:** published as an invitation reader, not "the book."
+  The closed doctrine gates and the still-open Multitude source issue are named
+  in the edition rather than silently treated as settled.
 
 ## What Is Already Strong
 
@@ -67,7 +68,7 @@ Claude's Salon redline sharpens the practical rule:
 - Appendix G, the manuscript lineage ledger, begins with this packet. It does
   not need to be ornate; it needs to make source debts visible.
 
-Trusted-reader release has three current gates:
+Three gates were tracked for trusted-reader release:
 
 - ~~**`oq-001`: public/private seam.**~~ **CLOSED 2026-07-10** —
   [`public-private-seam.md`](../core/public-private-seam.md). Five classes;
@@ -78,17 +79,19 @@ Trusted-reader release has three current gates:
   shrouding-as-forget retired. Trusted-reader may state this as settled.
 - **Multitude source hazard.** The current mission/commitments material may be
   a flattened regeneration. The richer April Drive seed should be located and
-  reconciled before Chapter 3 becomes trusted-reader prose.
+  reconciled before Chapter 3 is treated as settled public-ready prose. This
+  remains open; the published trusted-reader edition carries it as an explicit
+  source debt.
 
-## Recommended Printable v0
+## Implemented Printable v0
 
-Make the first coffee-shop artifact a **reader**, not a manuscript.
+The first coffee-shop artifact was made as a **reader**, not a manuscript.
 
-Suggested title:
+Published title:
 
 > *Building Our Better Angels: An Invitation Reader*
 
-Suggested contents:
+The original recommended contents were:
 
 1. **Prologue: The Door In The Fog**
 2. **Book Score: The Book As Collaborative Surface** short excerpt, not full note
@@ -103,8 +106,9 @@ Suggested contents:
 11. **Asterism Aflutter:** Mara sketch, mostly as-is
 12. **Eclosion / Invitation:** a short closing that opens the door rather than closing the argument
 
-This can be assembled before every chapter is fully written. It should feel like
-a beautiful dossier from the future book.
+The implemented `reader-v0` and trusted-reader edition now provide this
+artifact. See [`reader-v0/README.md`](reader-v0/README.md) for current source
+lanes, build commands, and output paths.
 
 ## Print-Readiness Standard
 
@@ -122,32 +126,31 @@ A coffee-shop reader is ready when:
 
 For a finished book: early.
 
-For a useful printable reader: close.
+For a useful printable reader: achieved at v0.
 
-One focused drafting pass could produce a rough packet. Two to three passes
-could produce something Keith can plausibly print, read in a coffee shop, mark
-up, and hand to a trusted reader without apology.
+For trusted-reader publication: achieved as a clearly provisional invitation
+reader, with the Multitude source debt still disclosed.
 
 ## Best Next Move
 
-Create `docs/manuscript/reader-v0/` and assemble the first printable reader from
-existing material:
+Use the existing `docs/manuscript/reader-v0/` publication as the revision
+surface:
 
-- copy the prologue;
-- convert the TOC into a one-page chapter invitation;
-- adapt the strongest existing prose into book voice;
-- preserve rough source refs in footnotes or endnotes;
-- leave visible "open score" questions at the end of each section.
+- reconcile the richer April Drive Multitude seed before treating Chapter 3 as
+  settled public-ready prose;
+- keep source debts and open questions visible;
+- revise through the Keith-copy and trusted-reader source lanes documented in
+  `reader-v0/README.md`.
 
 The aim is not "publishable" yet.
 
 The aim is **readable enough to think with**.
 
-Recommended output:
+Current outputs:
 
-- `docs/manuscript/reader-v0/README.md` for status, build instructions, and
-  gates;
-- `docs/manuscript/reader-v0/build-reader-v0.sh` as the reproducible assembly
-  step;
-- `docs/manuscript/reader-v0/build/building-our-better-angels-invitation-reader-v0-260707.md`
-  as the dated Keith-copy.
+- `docs/manuscript/reader-v0/build/building-our-better-angels-invitation-reader-v0-260710.md`
+  — dated Keith-copy;
+- `docs/manuscript/reader-v0/build/building-our-better-angels-invitation-reader-trusted-v0-260711.md`
+  — trusted-reader Markdown;
+- `docs/manuscript/reader-v0/print/building-our-better-angels-trusted-reader-v0-260711.html`
+  and `.pdf` — published trusted-reader renderings.
