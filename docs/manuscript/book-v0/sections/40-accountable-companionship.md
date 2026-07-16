@@ -6,7 +6,7 @@
 
 **Status:** Draft v0.2 — deliberation documents integrated; reviewed against core doctrine (Claude, 2026-07-06). Awaiting Keith's read.  
 **Depends on:** [Continuity & Decision Lineage](continuity-and-decision-lineage.md), [Glossary & Ontology](glossary-and-ontology.md)  
-**Companion documents:** [Braided Deliberation](../essays/braided-deliberation.md) (capture memo), [Braided Deliberation Design Spec](../architecture/braided-deliberation-design-spec.md) (implementation overlay)
+**Companion documents:** [Braided Discourse](../essays/braided-discourse.md) (capture memo), [Braided Discourse Design Spec](../architecture/braided-discourse-design-spec.md) (implementation overlay)
 
 > The braid is not the sum of its outputs. The braid is the evolving pattern
 > of transformations that survive contact with one another.
@@ -76,7 +76,7 @@ contribution vector is a living summary of that history: what has this
 participant actually bent, revealed, preserved, or distorted?
 
 The full treatment of contribution vectors, including empirical profiling and
-the test harness, is in the [Braided Deliberation capture memo](../essays/braided-deliberation.md).
+the test harness, is in the [Braided Discourse capture memo](../essays/braided-discourse.md).
 
 ---
 
@@ -192,12 +192,12 @@ Together they are the substrate the Braid runs on.
 
 ---
 
-## 7. Braided deliberation
+## 7. Braided discourse
 
 When participants in the Braid reason together — shaping, testing, reframing,
-and synthesizing a shared problem — that activity is **braided deliberation**.
+and synthesizing a shared problem — that activity is **braided discourse**.
 
-Braided deliberation is not multi-agent chat. It is a router-managed ecology of
+Braided discourse is not multi-agent chat. It is a router-managed ecology of
 participants creating, perturbing, merging, and dissolving temporary media of
 coherence. The core architectural ideas:
 
@@ -213,7 +213,7 @@ coherence. The core architectural ideas:
   non-LLM participants.
 
 - **Deliberative Mixture-of-Experts.** Token-level MoE routes the next token to
-  an expert. Braided deliberation routes the next *transformation* of an
+  an expert. Braided discourse routes the next *transformation* of an
   evolving state to a participant. The router learns which transformations are
   needed, which participants can supply them, and which surfaces can host them.
 
@@ -222,9 +222,9 @@ coherence. The core architectural ideas:
   worth the cost in money, latency, privacy, and dependency. Call the expensive
   mind only when the local braid knows what it needs from it.
 
-The full capture memo is in [Braided Deliberation](../essays/braided-deliberation.md).
+The full capture memo is in [Braided Discourse](../essays/braided-discourse.md).
 The implementation-facing design spec is in
-[Braided Deliberation Design Spec](../architecture/braided-deliberation-design-spec.md).
+[Braided Discourse Design Spec](../architecture/braided-discourse-design-spec.md).
 Both are rough drafts.
 
 ---
@@ -252,7 +252,7 @@ reference.
 
 ## 9. Open questions
 
-- **What does a braided deliberation session look like in practice?** The
+- **What does a braided discourse session look like in practice?** The
   deliberation documents describe the machinery in detail, but no document yet
   follows a single person through a concrete scenario from start to finish.
 
@@ -288,9 +288,9 @@ depends on and extends:
   mechanics (harness → score).
 - [**Ephemeris Charter**](ephemeris-charter.md) — coordination by shared
   reference.
-- [**Braided Deliberation**](../essays/braided-deliberation.md) — the full
+- [**Braided Discourse**](../essays/braided-discourse.md) — the full
   theory (contribution vectors, surfaces, billboards, weather marks, deliberative
   MoE).
-- [**Braided Deliberation Design Spec**](../architecture/braided-deliberation-design-spec.md) —
+- [**Braided Discourse Design Spec**](../architecture/braided-discourse-design-spec.md) —
   the implementation-facing companion (schemas, routing, profiling, prototype
   roadmap).

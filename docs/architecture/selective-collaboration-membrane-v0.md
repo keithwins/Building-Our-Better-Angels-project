@@ -167,7 +167,7 @@ Design candidates and mechanism notes:
 - this membrane note
 - `docs/architecture/collaboration-stack-sketch-v0.md`
 - `docs/architecture/boba-metamemory-and-lora-adaptation.md`
-- `docs/architecture/braided-deliberation-design-spec.md`
+- `docs/architecture/braided-discourse-design-spec.md`
 
 ### Manuscript
 

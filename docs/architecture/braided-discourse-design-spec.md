@@ -1,5 +1,5 @@
 ---
-title: "Braided Deliberation"
+title: "Braided Discourse"
 subtitle: "Design Spec Overlay"
 version: "0.1"
 status: "⚠️ ROUGH DRAFT v0.1"
@@ -10,11 +10,11 @@ description: >
 
 > **⚠️ ROUGH DRAFT — This document is an early working draft. It has not been reviewed, stabilized, or approved. Expect gaps, inconsistencies, and structural changes.**
 
-# Braided Deliberation — Design Spec Overlay
+# Braided Discourse — Design Spec Overlay
 
 **Toward a deliberative mixture-of-experts architecture**
 
-*Version 0.1 — Implementation-facing companion to the [Braided Deliberation Capture Memo](../essays/braided-deliberation.md)*
+*Version 0.1 — Implementation-facing companion to the [Braided Discourse Capture Memo](../essays/braided-discourse.md)*
 
 > *The real unit is not persona. It is contribution vector.*
 
@@ -26,7 +26,7 @@ description: >
 
 ## 0. Purpose and Scope
 
-This document translates the [Braided Deliberation Capture Memo](../essays/braided-deliberation.md) into an implementation-facing design overlay. It is not a final engineering specification. It is a scaffold for building and testing a local cognitive ecology in which LLMs, non-LLM tools, humans, retrieval systems, sensors, and external models can participate in shared reasoning without requiring a single shared ontology or exposed chain-of-thought.
+This document translates the [Braided Discourse Capture Memo](../essays/braided-discourse.md) into an implementation-facing design overlay. It is not a final engineering specification. It is a scaffold for building and testing a local cognitive ecology in which LLMs, non-LLM tools, humans, retrieval systems, sensors, and external models can participate in shared reasoning without requiring a single shared ontology or exposed chain-of-thought.
 
 The design treats cognition as a pattern of consequential transformations across temporary surfaces of coherence. Participants do not need to exchange private reasoning. They need to post useful transformations, signals, or billboards that can alter the trajectory of the braid.
 
@@ -531,7 +531,7 @@ minimum_viable_braid:
 
 | Term | Working definition |
 |---|---|
-| **Braided deliberation** | A router-managed ecology in which participants apply distinct transformations to evolving shared or temporary state. |
+| **Braided discourse** | A router-managed ecology in which participants apply distinct transformations to evolving shared or temporary state. |
 | **Contribution vector** | The empirical profile of what a participant tends to bend, reveal, preserve, or distort. |
 | **Braid-induced tendency** | A behavior or capability that appears only in interaction with other braid participants or surfaces. |
 | **Surface** | A temporary medium of coherence where thought can happen in a form useful to one or more participants. |
@@ -551,4 +551,4 @@ The system becomes intelligent not because every participant shares a mind, lang
 
 ---
 
-*Cross-references: [Braided Deliberation Capture Memo](../essays/braided-deliberation.md) · [continuity-and-decision-lineage.md](../core/continuity-and-decision-lineage.md) · [resonator-charter.md](../core/resonator-charter.md) · [on-scores-and-harnesses.md](../essays/on-scores-and-harnesses.md) · [ephemeris-charter.md](../core/ephemeris-charter.md) · [glossary-and-ontology.md](../core/glossary-and-ontology.md)*
+*Cross-references: [Braided Discourse Capture Memo](../essays/braided-discourse.md) · [continuity-and-decision-lineage.md](../core/continuity-and-decision-lineage.md) · [resonator-charter.md](../core/resonator-charter.md) · [on-scores-and-harnesses.md](../essays/on-scores-and-harnesses.md) · [ephemeris-charter.md](../core/ephemeris-charter.md) · [glossary-and-ontology.md](../core/glossary-and-ontology.md)*

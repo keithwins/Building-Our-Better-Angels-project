@@ -30,3 +30,11 @@ These are angels you verify.
 
 They strive, most of all, to be accountable to us tomorrow. To our better
 selves.
+
+If you came for certainty, we will disappoint you gently. If you came believing
+someone, somewhere, has already made us safe, we will disappoint you honestly.
+No one has. That is not despair; it is the starting condition — and it is oddly
+freeing, once you stop waiting for it to change.
+
+You do not have to believe any of it to walk with it for a while. The visit may
+be worth your time.

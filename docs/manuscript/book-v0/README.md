@@ -2,7 +2,7 @@
 
 **Title:** *Building Our Better Angels*  
 **Lane:** `book-v0`  
-**Build stamp:** `260712`  
+**Build stamp:** `260713`  
 **Status:** scaffold for coffee-shop reading and free revision
 
 This directory is a **forked reading sequence**, not the corpus.
@@ -34,18 +34,24 @@ from that attempt to help inside the weather, not the other way around.
 | `bridges/` | Short connective tissue between chapters |
 | `SOURCE_MAP.md` | What each section was forked from |
 | `build/` | Generated concatenated Markdown |
-| `build-book-v0.sh` | Reproducible assembly |
+| `print/` | Generated HTML (and PDF when a browser is available) |
+| `tools/` | Print HTML/PDF builders |
+| `build-book-v0.sh` | Reproducible Markdown assembly |
 
 ## Edit here, not the build
 
 **Source of truth for prose:** `sections/` and `bridges/` only.
 
-`build/building-our-better-angels-book-v0-*.md` is generated. Editing it will be
-overwritten on the next rebuild, and stale editor buffers of that file are how
-deleted editorial sections (`How To Read This Draft`, etc.) keep reappearing.
+`build/building-our-better-angels-book-v0-*.md` and `print/*` are generated.
+Editing them will be overwritten on the next rebuild, and stale editor buffers
+of the Markdown build are how deleted editorial sections keep reappearing.
 
 ```bash
 bash build-book-v0.sh
+bash tools/build-print-pdf.sh
 ```
 
-Then reopen or reload the build output if you want the concatenated packet.
+Open `print/building-our-better-angels-book-v0-*.html` in a browser for a
+letter-sized print preview, or use the PDF the script writes beside it.
+Suggested coffee-shop print: duplex, 2-up landscape ≈65% scale → ~20 sheets at
+~80 pages.

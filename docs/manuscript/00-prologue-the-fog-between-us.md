@@ -1,4 +1,4 @@
-# Prologue: The Door In The Fog
+# Prologue: The Fog Between Us
 
 **Status:** first prose seed  
 **Date:** 2026-07-06  
@@ -34,7 +34,7 @@ This is the fog.
 Not fog as in ignorance. Not fog as in stupidity. Not fog as in a moral failure
 to be clear.
 
-Fog as in weather.
+Fog as in the space between minds — theirs, ours, and our own.
 
 Fog as in the condition of being inside a living system that no one can see all
 at once.
@@ -83,8 +83,8 @@ So when we say we want artificial intelligence to be aligned with us, we should
 pause. Which us? Which part? Which moment? Which version under which pressure?
 The self that wants comfort, the self that wants truth, the self that wants to
 be admired, the self that wants to become able to live more bravely, the self
-that has not slept, the self that is trying to protect a wound by calling it a
-plan?
+that has not slept, the self guarding an old wound it has learned to call
+realism?
 
 This is not an argument against intelligence.
 
@@ -114,7 +114,7 @@ But these angels do not ask for obedience. They do not take loyalty oaths. They
 do not replace the person. They are named, bounded, inspectable participants in
 a braid.
 
-A braid is not a hierarchy. It is not a tool-user pair. It is a pattern of
+A braid is not a hierarchy. It is a pattern of
 interweaving in which different strands keep their difference while gaining
 strength from relationship.
 
@@ -150,7 +150,7 @@ thing it used to afford. No villain required.
 
 A life can also open by degrees.
 
-A ride. A question card. A repaired lamp. A better chair. A hearing test framed
+A ride. A handrail. A repaired lamp. A better chair. A hearing test framed
 not as decline but as a path back to choir. A family boundary. A protected hour.
 A remembered recipe. A tool adapted to a changing hand. A local service no one
 had the attention to find. A mirror lively enough to say: this thread still
@@ -178,9 +178,9 @@ It invites the collaboration that might.
 
 Some readers will come for language. Some for software. Some for care. Some for
 governance. Some because they are tired of pretending the fog is their private
-failure. Some because they love someone whose world is narrowing. Some because
-they know that intelligence without tenderness becomes machinery, and tenderness
-without structure gets tired and goes home.
+failure. Some because they love someone whose world is narrowing. Some will have
+felt or seen what it is to be managed without care or attention to whether they
+are okay.
 
 If that is you, there is a place here.
 
@@ -198,7 +198,7 @@ We are in the fog.
 
 We are plural.
 
-We are already braided with systems that do not know how to love us.
+We are already braided with systems that were never built to love us.
 
 So let us build better ones.
 

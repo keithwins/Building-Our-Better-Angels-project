@@ -1,12 +1,12 @@
 ---
-title: "Braided Deliberation"
+title: "Braided Discourse"
 subtitle: "Contribution Vectors, Fluid Surfaces, and Deliberative Mixture-of-Experts"
 description: "A capture memo for a local cognitive ecology"
 version: "0.1"
 status: "Rough Draft v0.1"
 ---
 
-# Braided Deliberation
+# Braided Discourse
 
 **Contribution Vectors, Fluid Surfaces, and Deliberative Mixture-of-Experts**
 
@@ -26,13 +26,13 @@ status: "Rough Draft v0.1"
 
 ## Status of This Memo
 
-This document captures a developing architecture and vocabulary for braided deliberation: a multi-participant reasoning system in which local models, tools, humans, retrieval systems, sensors, and other processes influence a shared trajectory through visible transformations. It is intentionally a capture memo rather than a finished paper. Its job is to preserve the nuance while it is still alive, while also shaping enough of the material into a design direction that can guide implementation.
+This document captures a developing architecture and vocabulary for braided discourse: a multi-participant reasoning system in which local models, tools, humans, retrieval systems, sensors, and other processes influence a shared trajectory through visible transformations. It is intentionally a capture memo rather than a finished paper. Its job is to preserve the nuance while it is still alive, while also shaping enough of the material into a design direction that can guide implementation.
 
 The memo avoids treating hidden chain-of-thought as the central object. Instead, it treats the durable and useful unit as the transformation a participant applies to a shared or temporary representational surface. Some of these transformations will be human-interpretable. Some may be machine-facing. Some may be sub-coherent: sufficiently legible to influence another participant, but not sufficiently legible to support a clean reply in the same language.
 
 ## Executive Orientation
 
-Braided deliberation is not multi-agent chat. It is a router-managed ecology of participants creating, perturbing, merging, and dissolving temporary media of coherence.
+Braided discourse is not multi-agent chat. It is a router-managed ecology of participants creating, perturbing, merging, and dissolving temporary media of coherence.
 
 The core unit is not a persona, role, or model name. The core unit is a contribution vector: the kind of transformation a participant tends to make possible.
 
@@ -56,9 +56,9 @@ The braid does not require a common mind. It requires mutually visible transform
 
 User interruption is not an afterthought in this architecture. When a human corrects a premise, suggests a fruitful direction, resists a frame, or marks a phrase as alive, that intervention should mutate the state of the braid. It should not merely append to the chat. It should alter the active surface on which cognition is happening.
 
-## §2 Braided Deliberation Trace
+## §2 Braided Discourse Trace
 
-A braided deliberation trace is the durable record of the transformations that mattered. It may include claims, assumptions, disagreements, routing decisions, cost estimates, user interventions, model deltas, retrieved memories, confidence changes, and sub-coherent signals. It need not be fully interpretable; it may have human-facing, machine-facing, and opaque layers.
+A braided discourse trace is the durable record of the transformations that mattered. It may include claims, assumptions, disagreements, routing decisions, cost estimates, user interventions, model deltas, retrieved memories, confidence changes, and sub-coherent signals. It need not be fully interpretable; it may have human-facing, machine-facing, and opaque layers.
 
 | Layer | Contents | Purpose |
 |---|---|---|
@@ -161,7 +161,7 @@ See also: [On Scores & Harnesses](on-scores-and-harnesses.md) for the broader ha
 
 ## §6 Deliberative Mixture-of-Experts
 
-The mixture-of-experts analogy becomes precise when lifted one level up. Token-level MoE routes the next token or hidden representation to an expert. Braided deliberation routes the next transformation of an evolving state to a participant.
+The mixture-of-experts analogy becomes precise when lifted one level up. Token-level MoE routes the next token or hidden representation to an expert. Braided discourse routes the next transformation of an evolving state to a participant.
 
 Token-level MoE routes the next token. Deliberative MoE routes the next transformation.
 
@@ -391,8 +391,8 @@ See also: [Glossary & Ontology](../core/glossary-and-ontology.md) for canonical 
 
 | Term | Working definition |
 |---|---|
-| Braided deliberation | A multi-participant reasoning process in which distinct transformations shape an evolving shared trajectory. |
-| Braided deliberation trace | The durable record of consequential transformations across participants, surfaces, billboards, and routing decisions. |
+| Braided discourse | A multi-participant reasoning process in which distinct transformations shape an evolving shared trajectory. |
+| Braided discourse trace | The durable record of consequential transformations across participants, surfaces, billboards, and routing decisions. |
 | Contribution vector | The empirical profile of what kind of transformation a participant tends to provide. |
 | Braid-induced tendency | A behavior or contribution that appears only in ecological interaction, not in solo testing. |
 | Temporary medium of coherence | A surface that forms because thought needs somewhere to happen. |
@@ -407,7 +407,7 @@ See also: [Glossary & Ontology](../core/glossary-and-ontology.md) for the projec
 
 ## §15 Closing Formulation
 
-Braided deliberation begins as a way for two local models to inform each other without sharing hidden chains of thought. It becomes something larger: a local cognitive ecology in which many kinds of participants create temporary media of coherence, post billboards across partial ontologies, and route scarce attention toward the transformations most needed by the current state.
+Braided discourse begins as a way for two local models to inform each other without sharing hidden chains of thought. It becomes something larger: a local cognitive ecology in which many kinds of participants create temporary media of coherence, post billboards across partial ontologies, and route scarce attention toward the transformations most needed by the current state.
 
 The braid is not the sum of its outputs. The braid is the evolving pattern of transformations that survive contact with one another.
 

@@ -17,3 +17,4 @@ logs/jobs/
 # Python
 __pycache__/
 *.pyc
+docs/manuscript/book-v0/tools/.venv/

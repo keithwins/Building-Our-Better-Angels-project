@@ -103,8 +103,8 @@ loyalty that replaces judgment.
 **Open score:** what would it mean for an intelligence to disagree with you in a
 way that preserves dignity?
 
-**Sources:** `boba-braid.md`, `braided-deliberation.md`,
-`braided-deliberation-design-spec.md`.
+**Sources:** `boba-braid.md`, `braided-discourse.md`,
+`braided-discourse-design-spec.md`.
 
 ## Chapter 5: Scores, Not Leashes
 

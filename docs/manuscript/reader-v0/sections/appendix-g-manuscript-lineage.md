@@ -27,7 +27,7 @@ packet.
 | Fog notes | `docs/essays/the_fog_260629.md` | adaptable |
 | Wobbly Edge notes | `docs/essays/the-wobbly-edge.md` | adaptable |
 | Multitude notes | glossary; mission/commitments; Salon corrections | gated by April Drive seed |
-| Braid / angels notes | `docs/core/boba-braid.md`; braided deliberation docs | rough but coherent |
+| Braid / angels notes | `docs/core/boba-braid.md`; braided discourse docs | rough but coherent |
 | Asterisms notes | `docs/essays/Asterisms260702.md` | adaptable |
 | VCL / elderhood notes | VCL essay; elderhood essay; Asterism Aflutter sketch | strong seed |
 | Salon note | Salon log and web orientation note | real surface, web UI pending |

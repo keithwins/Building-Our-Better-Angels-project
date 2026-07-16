@@ -69,3 +69,19 @@ To respect human-sized time and attention, the orientation surface does not pres
 *   **The Conversational Walk (The Tour):** A spoken or podcast-like walkthrough designed to combat screen fatigue. It resources the somatic layers of vital continuity, allowing reflection to occur while walking, resting, or driving.
 
 At the wobbly edge, the orientation surface does not demand a leap. It shrinks the loop. It exposes the state, names the uncertainty, and makes recovery visible, ensuring that the wobbly tower of shoulders beneath our feet remains a stable foundation for the person standing there.
+
+---
+
+## Open thread — the parental edge (seeded 2026-07-16)
+
+The clearest picture of the wobbly edge may be parental: a parent at the pool's
+edge whose *knowledgeable* presence is exactly what lets a child inch toward the
+board and finally jump — held, not carried, and often reached-for before the
+child knows to ask. It ties the wobbly edge to **trust-and-verify** (each
+verified catch buys the next inch of daring) and to the larger intuition that
+humans are, in part, our own kinds of angels to one another. Not yet placed in
+the argument; kept here so it isn't lost.
+
+*(Related note for the next pass: the "first step is a slowdown" framing above
+now reads a little rote. The truer move at the edge is not self-mastery but
+reaching for help that is already reaching back.)*

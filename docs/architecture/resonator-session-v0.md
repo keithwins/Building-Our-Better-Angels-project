@@ -2,7 +2,7 @@
 title: Resonator Session v0
 status: DRAFT - first operational note, pre-build
 date: 2026-07-06
-companions: ../core/resonator-charter.md, ../core/boba-braid.md, ../essays/braided-deliberation.md, braided-deliberation-design-spec.md, ../core/continuity-and-decision-lineage.md
+companions: ../core/resonator-charter.md, ../core/boba-braid.md, ../essays/braided-discourse.md, braided-discourse-design-spec.md, ../core/continuity-and-decision-lineage.md
 question: what does a Resonator pass do inside a braid?
 ---
 
@@ -222,7 +222,7 @@ concept should be revised before code is built.
 
 Use the current design question as the first scenario:
 
-> Is braided deliberation necessary and useful, or is it pie in the sky?
+> Is braided discourse necessary and useful, or is it pie in the sky?
 
 A Resonator pass should not answer only with architecture. It should notice that
 the question carries practical concern: Keith does not want a beautiful theory
@@ -233,7 +233,7 @@ it outruns use.
 
 The Resonator billboard might be:
 
-> Treat braided deliberation as a discipline already needed in conversation, not
+> Treat braided discourse as a discipline already needed in conversation, not
 > as a platform to build before proof. The first proof is whether this very
 > Resonator pass helps future work stay clearer.
 
@@ -263,7 +263,7 @@ The Resonator billboard might be:
 Do not build the router yet. Run three manual Resonator passes over existing
 BOBA questions and record whether they helped:
 
-1. braided deliberation: useful discipline or platform fantasy;
+1. braided discourse: useful discipline or platform fantasy;
 2. `confidential:resonator`: hard local-only wall or gated egress;
 3. confidentiality without forgetting: encrypt-at-rest and access control under
    [`no-forgetting.md`](../core/no-forgetting.md) (no crypto-shred / key-fade).

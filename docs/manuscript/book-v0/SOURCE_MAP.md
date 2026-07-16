@@ -1,14 +1,16 @@
 # book-v0 source map
 
 Forked 2026-07-12. Corpus paths are provenance only. Edit the `sections/` copies.
+**Reading order is defined in `build-book-v0.sh`, not by filename numbers.**
 
 | Section | Forked from | Notes |
 |---|---|---|
-| `00-title-and-status.md` | new | Opening posture for this lane |
-| `01-why-we-are-here.md` | new | *What now?* — precarious inviting start |
-| `03-the-name.md` | adapted from `reader-v0/sections-trusted/02-the-name-better-angels.md` | |
-| `04-a-map.md` | new | Contents |
-| `10-prologue-the-door-in-the-fog.md` | `docs/manuscript/00-prologue-the-door-in-the-fog.md` | Strip status front matter in later pass |
+| `00-title-and-status.md` | new | Title page + *What now?* epigraph (slimmed 2026-07-15) |
+| `05-prologue-known.md` | new | Opening scene (2026-07-15); hands into The Village |
+| `06-the-village.md` | `docs/essays/the-village-the-stranger-and-the-angel.md` | Early chapter; forked 2026-07-15; needs book-voice pass |
+| `03-the-name.md` | adapted from `reader-v0/sections-trusted/02-the-name-better-angels.md` | Now follows The Village (pays off "the Angel"); closes with the reader-invitation salvaged from the deleted `01-why-we-are-here.md` |
+| `04-a-map.md` | new | Contents (updated 2026-07-15 to new order) |
+| `10-prologue-the-door-in-the-fog.md` | `docs/manuscript/00-prologue-the-door-in-the-fog.md` | Now the threshold into the Fog movement; strip status front matter in later pass |
 | `20-the-fog.md` | `docs/essays/the_fog_260629.md` | Needs book-voice pass |
 | `30-the-wobbly-edge.md` | `docs/essays/the-wobbly-edge.md` | Needs book-voice pass |
 | `35-the-multitude.md` | `docs/core/boba-core-mission-and-commitments.md` | Placeholder fork; April Drive Multitude seed still open |
