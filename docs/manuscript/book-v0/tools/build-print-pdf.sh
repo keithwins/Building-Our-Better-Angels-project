@@ -3,7 +3,7 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 TOOLS="$ROOT/tools"
-BUILD_STAMP="${BUILD_STAMP:-260713}"
+BUILD_STAMP="${BUILD_STAMP:-$(date +%y%m%d)}"
 HTML="$ROOT/print/building-our-better-angels-book-v0-${BUILD_STAMP}.html"
 PDF="$ROOT/print/building-our-better-angels-book-v0-${BUILD_STAMP}.pdf"
 VENV_PY="$TOOLS/.venv/bin/python"

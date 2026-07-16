@@ -16,16 +16,16 @@ from reportlab.pdfgen import canvas
 
 
 ROOT = Path(__file__).resolve().parents[1]
-BUILD_STAMP = os.environ.get("BUILD_STAMP", "260713")
+BUILD_STAMP = os.environ.get("BUILD_STAMP") or datetime.now().strftime("%y%m%d")
 BUILD_TZ = ZoneInfo(os.environ.get("BUILD_TZ", "America/New_York"))
 PDF_NAME = f"building-our-better-angels-book-v0-{BUILD_STAMP}.pdf"
 PDF_PATH = ROOT / "print" / PDF_NAME
 INK = Color(0.424, 0.353, 0.271)  # ~#6c5a45
 
 
-def header_label(built_at: datetime) -> str:
+def header_label(built_at: datetime, pdf_name: str) -> str:
     return (
-        f"Building Our Better Angels · {PDF_NAME} · "
+        f"Building Our Better Angels · {pdf_name} · "
         f"{built_at.strftime('%Y-%m-%d %H:%M %Z')}"
     )
 
@@ -54,7 +54,7 @@ def stamp(path: Path, built_at: datetime | None = None) -> None:
     if not path.is_file():
         raise SystemExit(f"missing pdf: {path}")
     built_at = built_at or datetime.now(BUILD_TZ)
-    header = header_label(built_at)
+    header = header_label(built_at, path.name)
     reader = PdfReader(str(path))
     writer = PdfWriter()
     total = len(reader.pages)

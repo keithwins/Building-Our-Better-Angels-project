@@ -15,7 +15,7 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[1]
 SECTIONS = ROOT / "sections"
 BRIDGES = ROOT / "bridges"
-BUILD_STAMP = os.environ.get("BUILD_STAMP", "260713")
+BUILD_STAMP = os.environ.get("BUILD_STAMP") or datetime.now().strftime("%y%m%d")
 PDF_NAME = f"building-our-better-angels-book-v0-{BUILD_STAMP}.pdf"
 OUT = ROOT / "print" / f"building-our-better-angels-book-v0-{BUILD_STAMP}.html"
 BUILD_TZ = ZoneInfo(os.environ.get("BUILD_TZ", "America/New_York"))
@@ -57,7 +57,8 @@ def build() -> None:
     running_header = header_label(built_at)
     sequence: list[tuple[str, Path, str]] = [
         ("title", SECTIONS / "00-title-and-status.md", "frontmatter"),
-        ("why", SECTIONS / "01-why-we-are-here.md", "frontmatter"),
+        ("known", SECTIONS / "05-prologue-known.md", "frontmatter"),
+        ("village", SECTIONS / "06-the-village.md", "frontmatter"),
         ("name", SECTIONS / "03-the-name.md", "frontmatter"),
         ("map", SECTIONS / "04-a-map.md", "frontmatter"),
         ("prologue", SECTIONS / "10-prologue-the-door-in-the-fog.md", "prologue"),
