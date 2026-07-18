@@ -35,7 +35,7 @@ The Asterisms store is **immutable and governable** — nobody can silently rewr
 
 **Load-bearing consequence:** because the store is *immutable*, a plaintext session, once written, cannot be cleanly walked back. Therefore, **encrypt first, then confide.** No real session enters the store until a confidential data class exists.
 
-**No forgetting:** encryption and access control are not a forgetting path. There is no crypto-shred, no key-fading-to-oblivion, and no “shrouding” that destroys recoverable history. `oq-009` closed 2026-07-10 — see [`no-forgetting.md`](no-forgetting.md). Change of mind or reframing = new formations over immutable past.
+**Never Forget:** encryption and access control are not a forgetting path. There is no crypto-shred, no key-fading-to-oblivion, and no “shrouding” that destroys recoverable history. `oq-009` closed 2026-07-10 — see [`no-forgetting.md`](no-forgetting.md). Change of mind or reframing = new formations over immutable past.
 
 **Self-facing pacing (oq-001 class 5(b)):** the Resonator owns the duty not to
 ambush. Material that is sensitive *to Keith* (PTSD-class, wounds, anything that

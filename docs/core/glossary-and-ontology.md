@@ -174,7 +174,8 @@ The append-only, immutable database of memory, lineage, and attention. Named for
 ### The Psychology of Immutability
 While the Asterisms ledger is mathematically un-rewritable, humans biologically survive by rewriting their goals and history in the face of limited bandwidth—sampling our vast culture "with tweezers" from the limited offerings in front of us. Asterisms supports this psychological need not by deleting past blocks, but by allowing the inner multitude to layer *new formations and reframed attention* over the immutable past, treating our history as a seed containing a sprout.
 
-### No Forgetting
+### Never Forget
+*(formerly “No Forgetting”; renamed 2026-07-17, same doctrine `oq-009`)*
 **Adopted 2026-07-10** (`oq-009` closed). There is no forgetting path on the durable substrate: no deletion of history, no crypto-shredding, no key-fading-to-oblivion. “Shrouding” as a euphemism for forgetting is retired. Confidentiality (encryption, access control, egress stomata) is not forgetting. Full ruling: [`no-forgetting.md`](./no-forgetting.md).
 
 ### Public / private seam

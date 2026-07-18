@@ -68,7 +68,7 @@ Companions: [`no-forgetting.md`](no-forgetting.md) (hold ≠ erase),
 5. **Self-facing pacing is care.** Surfacing class 5(b) material requires
    consent, context, or Resonator judgment under charter — never casual recall
    as “helpfulness.”
-6. **No forgetting still holds.** Declining to surface or publish is not
+6. **Never Forget still holds.** Declining to surface or publish is not
    erasure ([`no-forgetting.md`](no-forgetting.md)).
 
 ## What this closes — and what it does not

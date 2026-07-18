@@ -93,7 +93,7 @@ The ephemeris charter says: *"This is the unit the Ephemeris **hands out**."*
 
 **Closed.** See [`no-forgetting.md`](no-forgetting.md). No forgetting path; no crypto-shred; no key-fading-to-oblivion; “shrouding” as forgetting is retired. Confidentiality ≠ forgetting. Older audit text below kept only as historical context of the tension.
 
-~~`oq-003` / book-plan shrouding-as-forget / Resonator gap — awaiting ruling.~~ → **`oq-009` adopted: No Forgetting.**
+~~`oq-003` / book-plan shrouding-as-forget / Resonator gap — awaiting ruling.~~ → **`oq-009` adopted: Never Forget.**
 
 
 ### Tension 3: Resonator as Mirror vs. Braid's Anti-Mirror Warning

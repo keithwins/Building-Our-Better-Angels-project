@@ -14,7 +14,7 @@ and practical rules live in the canonical doc.
 
 Reader-v0 may state this as settled doctrine. Gates 3–5 below still apply.
 
-## Gate 2: No Forgetting (`oq-009`) — CLOSED 2026-07-10
+## Gate 2: Never Forget (`oq-009`) — CLOSED 2026-07-10
 
 **Adopted:** [`docs/core/no-forgetting.md`](../../core/no-forgetting.md).
 

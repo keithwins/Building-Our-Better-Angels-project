@@ -1,18 +1,21 @@
 ---
-title: No Forgetting (oq-009 closed)
+title: Never Forget (oq-009 closed)
 status: ADOPTED 2026-07-10
 ruling: Keith
 companions: continuity-and-decision-lineage.md, glossary-and-ontology.md, resonator-charter.md
 ---
 
-# No Forgetting
+# Never Forget
+
+*Formerly titled “No Forgetting” (renamed 2026-07-17 for sharpness; same
+doctrine, `oq-009`).*
 
 **Adopted 2026-07-10.** Closes `oq-009` (and the related “forgetting path” /
 crypto-shred / key-fading cluster formerly also gestured at as `oq-003`).
 
 ## Ruling
 
-1. **No forgetting** on Asterisms, Ephemeris logs, or any durable BOBA substrate.
+1. **Never forget** on Asterisms, Ephemeris logs, or any durable BOBA substrate.
    True forgetting is historical rewriting by another door. It is not allowed.
 
 2. **No crypto-shredding** — do not destroy encryption keys to make ciphertext
