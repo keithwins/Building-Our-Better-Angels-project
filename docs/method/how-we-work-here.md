@@ -306,6 +306,27 @@ Several overnight cards produced a "Latest summary" in their metadata and report
 
 The rule: card bodies should explicitly instruct workers to call `kanban_complete` as the final action, with a clear statement that the card is not complete until this call is made. Do not assume workers know this without being told.
 
-## 20. See also
+## 20. Fold the session (with judgment)
+
+A substantive working session ends by **folding** into a `docs/session-records/`
+entry — a folded score: the frame the work improvised inside (concern,
+boundaries, invariant, stop condition) and its provenance (files changed, commit
+hashes, decisions of record, open threads). This is the handoff discipline (§11)
+turned into a durable, dated artifact for future Keith and future agents — the
+record of how a session produced the things that came from it.
+
+Apply judgment about *whether* to fold. A session earns a record when it changed
+the corpus, made a decision of record, or produced an artifact. It does not need
+one when it was a quick question or a lookup — do not manufacture provenance for
+asking directions to Syracuse.
+
+Fold by **default**, not on request. Keep the record as a living draft during a
+substantive session and push it early, so ending abruptly — slamming the lid —
+loses little. A one-word cue ("fold") can force it, but the habit must not depend
+on the human remembering. See
+[`../session-records/boba-session-record-260716-naming-the-fog.md`](../session-records/boba-session-record-260716-naming-the-fog.md)
+for the shape.
+
+## 21. See also
 
 The continuity this discipline serves — how a whole life stays legible to itself across sessions, on a record no participant can silently rewrite — is doctrine in [`../core/continuity-and-decision-lineage.md`](../core/continuity-and-decision-lineage.md).

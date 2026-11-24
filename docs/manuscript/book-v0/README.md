@@ -21,10 +21,12 @@ record of how the project currently wants to sound.
 This draft does **not** begin by justifying a project or staging a philosophical
 seminar about fog.
 
-It begins because a response to *what now?* was required — in a moment where
-older domination presses from one side, a new kind of intelligence enters from
-another, and we remain misaligned and unevenly resourced. Reflexivity follows
-from that attempt to help inside the weather, not the other way around.
+It begins with an **overture**: the art of acting on our best inclinations
+consistently and confidently. The trouble of the age (seen, sorted, unaccompanied)
+arrives in service of that aim — not as an eldercare or tragedy manual. The next
+movement maps village / neighbor / citizen / angel; doctrine and naming that
+stick here should flow back to the corpus when appropriate (see `SOURCE_MAP.md`
+for `intentionally-adapted` and `flowback pending`).
 
 ## Layout
 

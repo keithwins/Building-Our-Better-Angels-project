@@ -1,14 +1,15 @@
 # Contents
 
-A scene to begin. Then the long question underneath it — what it has cost us to
-be known, and what it might mean to be known differently. Then the name, and the
-journey it opens: into the fog and the wobbly edge, through the multitude toward
-companionship, scores, trust, memory, and the lively mirror; a life that can
-narrow or open, a thread that holds, a protocol between us, a shared surface —
-and, at the last, eclosion, which is only another beginning.
+An overture: what this book is for — becoming more able to act on our best
+inclinations. Then the neighbor and the citizen — and what an angel would have
+to refuse and make possible. Then the name, and the journey it opens: into the
+fog and the wobbly edge, through the multitude toward companionship, scores,
+trust, memory, and the lively mirror; a life that can narrow or open, a thread
+that holds, a protocol between us, a shared surface — and, at the last,
+eclosion, which is only another beginning.
 
-- Known
-- The Village, the Stranger, and the Angel
+- Overture
+- The Neighbor and the Citizen
 - Building Our Better Angels
 - The Door in the Fog
 - The Fog

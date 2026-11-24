@@ -6,10 +6,10 @@ Forked 2026-07-12. Corpus paths are provenance only. Edit the `sections/` copies
 | Section | Forked from | Notes |
 |---|---|---|
 | `00-title-and-status.md` | new | Title page + *What now?* epigraph (slimmed 2026-07-15) |
-| `05-prologue-known.md` | new | Opening scene (2026-07-15); hands into The Village |
-| `06-the-village.md` | `docs/essays/the-village-the-stranger-and-the-angel.md` | Early chapter; forked 2026-07-15; needs book-voice pass |
-| `03-the-name.md` | adapted from `reader-v0/sections-trusted/02-the-name-better-angels.md` | Now follows The Village (pays off "the Angel"); closes with the reader-invitation salvaged from the deleted `01-why-we-are-here.md` |
-| `04-a-map.md` | new | Contents (updated 2026-07-15 to new order) |
+| `05-prologue-known.md` | new | **Overture** (retitled 2026-07-16): empowerment-led opening; hands into Village chapter |
+| `06-the-village.md` | `docs/essays/the-village-the-stranger-and-the-angel.md` | **intentionally-adapted** 2026-07-16: stranger → neighbor/citizen; intro quieted (overture carries thesis); empowerment through-line; **flowback pending** if names stick |
+| `03-the-name.md` | adapted from `reader-v0/sections-trusted/02-the-name-better-angels.md` | Follows Village chapter (pays off "the Angel"); reader-invitation from retired `01-why-we-are-here.md` |
+| `04-a-map.md` | new | Contents (updated 2026-07-16 for Overture + neighbor/citizen) |
 | `10-prologue-the-door-in-the-fog.md` | `docs/manuscript/00-prologue-the-door-in-the-fog.md` | Now the threshold into the Fog movement; strip status front matter in later pass |
 | `20-the-fog.md` | `docs/essays/the_fog_260629.md` | Needs book-voice pass |
 | `30-the-wobbly-edge.md` | `docs/essays/the-wobbly-edge.md` | Needs book-voice pass |
