@@ -1,0 +1,23 @@
+document: responder-status-strategy-261128
+kind: status and strategy report, dated snapshot
+date: 2026-11-28
+files:
+  - name: responder-status-strategy-261128.md
+    sha256: bd37dc194462fb55a40494878bfcdecbde2d0ecafba48a43d138717075c8518c
+canon_status: candidate
+provisional:
+  - Warnings state an "unless" condition so a heeded warning isn't scored as a miss. Revisit after the replay pilot.
+  - The system may propose check-in threads, marked as its own, which Keith can veto. Revisit with practice.
+  - Agent framework: scheduled scripts now, MCP tools behind a logging gateway, a framework only when a specific need appears. Working lean, not yet confirmed.
+editing_rule: >
+  Never edited. The claude.ai doc is the working draft; each sign-off adds a
+  new dated snapshot beside this one rather than changing it.
+working_draft: https://claude.ai/artifact/8exUz41uPdnTQkp68gA4Hg
+exported_from_rev: 118
+follows:
+  - ../first-responder-00-overview-261114T0522.md
+  - ../first-responder-04-roadmap-261114T0522.md
+sources_outside_repo:
+  - 261127 handoff, "Better Angels — Evaluating Intelligence Through Longitudinal Trust"
+  - 261121 First Responder summary doc
+  - 261123 event log session
