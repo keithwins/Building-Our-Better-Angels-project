@@ -1,5 +1,5 @@
 ---
-title: "First Responder: status and strategy report"
+title: "Responder: status and strategy report"
 status: SNAPSHOT, signed off 261128; canon candidate (three items provisional, listed in the sidecar)
 date: 2026-11-28
 follows: first-responder-00 to -04 (261114)
@@ -7,7 +7,7 @@ folds-in: Inkling and longitudinal-trust handoff (261127); design decisions work
 provenance: Keith + Claude dialogue, 261127 to 261128; exported from the claude.ai working draft
 ---
 
-# First Responder — Status and Strategy Report
+# Responder — Status and Strategy Report
 
 Nov 27, 2026 · @Keith
 
@@ -201,7 +201,7 @@ One subtler risk, sketched lightly: anticipation can disguise steering. A system
 
 Three calls are yours; the rest is sequenced above.
 
-- **Name:** Responder, First Response, or keep First Responder.
+- **Name:** settled 261128: Responder.
 - **Where the ledger lives first:** the phone event log works today and already has the integrity properties. Its live copy sits in claude.ai storage, though, with Drive as backup, not on your machines. My lean: start there, and mirror to Ambient Angel with the nightly rclone pull already proposed on 261123.
 - **The pilot:** one date, 261110 for now, with questions by area. Still open: whether the four context packages are the right ones.
 

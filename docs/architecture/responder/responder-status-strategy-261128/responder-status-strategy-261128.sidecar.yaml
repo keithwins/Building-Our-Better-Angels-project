@@ -3,7 +3,7 @@ kind: status and strategy report, dated snapshot
 date: 2026-11-28
 files:
   - name: responder-status-strategy-261128.md
-    sha256: bd37dc194462fb55a40494878bfcdecbde2d0ecafba48a43d138717075c8518c
+    sha256: f599a115b08d094d37cec7d271da4071b543c57f1d3bc83d30861491004a3cd7
 canon_status: candidate
 provisional:
   - Warnings state an "unless" condition so a heeded warning isn't scored as a miss. Revisit after the replay pilot.
@@ -21,3 +21,6 @@ sources_outside_repo:
   - 261127 handoff, "Better Angels — Evaluating Intelligence Through Longitudinal Trust"
   - 261121 First Responder summary doc
   - 261123 event log session
+corrections:
+  - date: 2026-11-28
+    note: Title and Name line changed to Responder, the name settled in the same sign-off session, before the snapshot was merged. The earlier wording is in git history.
